@@ -21,6 +21,7 @@ gem 'haml-rails'
 gem 'aws-s3'
 gem 'mongoid-paperclip', require: 'mongoid_paperclip'
 gem 'dynamic_form'
+gem 'httparty'
 
 gem 'omniauth' # It's a sane default these days
 gem 'omniauth-facebook'

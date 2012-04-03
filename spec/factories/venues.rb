@@ -2,5 +2,8 @@
 
 FactoryGirl.define do
   factory :venue do
-    end
+  end
+  
+  factory :foursquare_venue, class: Foursquare::Venue do
+  end
 end

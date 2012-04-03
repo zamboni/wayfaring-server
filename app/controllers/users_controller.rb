@@ -1,7 +1,19 @@
 class UsersController < ApplicationController
   before_filter :require_user, only: [:dashboard]
+  respond_to :json
+  
   def new
     @identity = env['omniauth.identity']
+  end
+  
+  def create
+    @user = User.find_or_create_from_provider params[:provider][:type], params[:provider][:token]
+    
+    if @user
+      render json: {user_id: @user.id}.to_json
+    else
+      render text: 'Error cannot create user', status: 404
+    end
   end
   
   def forgot_password

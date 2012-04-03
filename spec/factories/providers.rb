@@ -2,5 +2,8 @@
 
 FactoryGirl.define do
   factory :provider do
-    end
+  end
+  
+  factory :foursquare_provider, class: Foursquare::Provider do
+  end
 end

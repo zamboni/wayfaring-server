@@ -1,0 +1,107 @@
+---
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: https://api.foursquare.com:443/v2/users/self?oauth_token=1234
+    body: !!null 
+    headers: !!null 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 401
+      message: Unauthorized
+    headers:
+      access-control-allow-origin:
+      - ! '*'
+      cache-control:
+      - no-cache, private, no-store
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Tue, 03 Apr 2012 02:29:12 GMT
+      expires:
+      - Tue, 3 Apr 2012 02:29:12 GMT
+      pragma:
+      - no-cache
+      server:
+      - nginx/1.1.17
+      content-length:
+      - '110'
+      connection:
+      - Close
+    body: ! '{"meta":{"code":401,"errorType":"invalid_auth","errorDetail":"OAuth token
+      invalid or revoked."},"response":{}}'
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: https://api.foursquare.com:443/v2/users/self?oauth_token=UJ4S0DJFXU00KFVFF1T4CX5FNFFD4JOSIVT52HGPM3YXC2OV
+    body: !!null 
+    headers: !!null 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      access-control-allow-origin:
+      - ! '*'
+      cache-control:
+      - no-cache, private, no-store
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Tue, 03 Apr 2012 02:31:40 GMT
+      expires:
+      - Tue, 3 Apr 2012 02:31:40 GMT
+      pragma:
+      - no-cache
+      server:
+      - nginx/1.1.17
+      x-ratelimit-limit:
+      - '1000'
+      x-ratelimit-remaining:
+      - '1000'
+      content-length:
+      - '1690'
+      connection:
+      - Close
+    body: ! '{"meta":{"code":200,"errorType":"deprecated","errorDetail":"Please provide
+      an API version to avoid future errors.See http:\/\/bit.ly\/vywCav"},"notifications":[{"type":"notificationTray","item":{"unreadCount":0}}],"response":{"user":{"id":"20566366","firstName":"RebelHold","lastName":"Test","photo":"https:\/\/foursquare.com\/img\/blank_boy.png","gender":"male","homeCity":"Phoenix","canonicalUrl":"https:\/\/foursquare.com\/user\/20566366","type":"user","relationship":"self","contact":{"email":"test@rebelhold.com"},"pings":false,"badges":{"count":1},"mayorships":{"count":0,"items":[]},"checkins":{"count":2,"items":[{"id":"4f39fa0ee4b0459ce9b36705","createdAt":1329199630,"type":"checkin","timeZone":"America\/Phoenix","timeZoneOffset":-420,"venue":{"id":"4c82776dd8086dcbdea67652","name":"Sunbelt
+      Rentals","contact":{},"location":{"address":"2066 E. University Dr","lat":33.42240571975708,"lng":-111.89806938171387,"city":"Tempe","state":"Az","country":"United
+      States"},"categories":[{"id":"4bf58dd8d48988d112951735","name":"Hardware Store","pluralName":"Hardware
+      Stores","shortName":"Hardware","icon":"https:\/\/foursquare.com\/img\/categories\/shops\/hardware.png","parents":["Shops
+      & Services"],"primary":true}],"verified":false,"stats":{"checkinsCount":9,"usersCount":7,"tipCount":0}},"photos":{"count":0,"items":[]},"comments":{"count":0,"items":[]}}]},"friends":{"count":0,"groups":[{"type":"friends","name":"Mutual
+      friends","count":0,"items":[]},{"type":"others","name":"Other friends","count":0,"items":[]}]},"following":{"count":0},"tips":{"count":0},"requests":{"count":0},"todos":{"count":0},"photos":{"count":0},"scores":{"recent":0,"max":5,"goal":50,"checkinsCount":0}}}}'
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: https://api.foursquare.com:443/v2/users/self?oauth_token=
+    body: !!null 
+    headers: !!null 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 400
+      message: Bad Request
+    headers:
+      access-control-allow-origin:
+      - ! '*'
+      cache-control:
+      - no-cache, private, no-store
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Tue, 03 Apr 2012 06:16:11 GMT
+      expires:
+      - Tue, 3 Apr 2012 06:16:11 GMT
+      pragma:
+      - no-cache
+      server:
+      - nginx/1.1.17
+      content-length:
+      - '176'
+      connection:
+      - Close
+    body: ! '{"meta":{"code":400,"errorType":"invalid_auth","errorDetail":"Missing
+      access credentials. See https:\/\/developer.foursquare.com\/docs\/oauth.html
+      for details."},"response":{}}'
+    http_version: '1.1'
