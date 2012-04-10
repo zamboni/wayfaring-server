@@ -27,7 +27,6 @@ gem 'omniauth' # It's a sane default these days
 gem 'omniauth-facebook'
 gem 'omniauth-twitter'
 gem 'omniauth-google-oauth2'
-gem 'omniauth-identity'
 gem 'bcrypt-ruby'
 
 gem 'stripe'
@@ -57,7 +56,9 @@ group :test, :development do
   gem 'timecop'
   gem 'vcr'
   gem 'fakeweb'
-  gem 'email_spec' 
+  gem 'email_spec'
+  gem 'pry'
+  gem 'pry-nav'
 
   # Pretty printed test output
   gem 'turn', require: false

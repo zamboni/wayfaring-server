@@ -9,10 +9,10 @@ class UsersController < ApplicationController
   def create
     @user = User.find_or_create_from_provider params[:provider][:type], params[:provider][:token]
     
-    if @user
+    if @user.save
       render json: {user_id: @user.id}.to_json
     else
-      render text: 'Error cannot create user', status: 404
+      render text: 'Error cannot find or create user', status: 404
     end
   end
   
@@ -30,7 +30,7 @@ class UsersController < ApplicationController
   def reset_password
     @user = User.where(token: params[:token]).first
   end
-
+  
   def update_password
     @user = User.find params[:user_id]
     if @user.update_attributes params[:user]
