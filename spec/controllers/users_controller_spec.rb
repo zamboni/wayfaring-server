@@ -14,7 +14,5 @@ describe UsersController do
         end
       end
     end
-    context 'from a website' do
-    end
   end
 end
