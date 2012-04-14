@@ -1,11 +1,7 @@
 RebelFoundation::Application.routes.draw do
   resources :users do
     put 'update_password'
-    resources :providers do
-      collection do
-        get :foursquare
-      end
-    end
+    resources :providers, controller: 'users/providers'
   end
   
   match '/dashboard'        => 'users#dashboard',       as: :dashboard

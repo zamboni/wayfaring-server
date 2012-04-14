@@ -7,13 +7,13 @@ class UsersController < ApplicationController
   end
   
   def create
-    @user = User.find_or_create_from_provider params[:provider][:type], params[:provider][:token]
+    @provider = Provider.find_or_create params[:provider][:type], params[:provider][:token]
     
-    if @user.save
-      render json: {user_id: @user.id}.to_json
-    else
-      render text: 'Error cannot find or create user', status: 404
+    if @provider.user.nil?
+      @user = User.create provider: @provider
+      @user.save
     end
+    render json: {user_id: @provider.user.id, provider_id: @provider.id}
   end
   
   def forgot_password

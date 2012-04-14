@@ -8,21 +8,18 @@ class User
   
   has_many :providers, dependent: :destroy
   
-  def self.find_or_create_from_provider provider_type, provider_token
+  def find_or_create_provider provider_type, provider_token
+    debugger
     @provider_class = Object::const_get(provider_type.classify)::const_get('Provider')
     @uid            = @provider_class.get_uid provider_token
-    @provider       = @provider_class.find_or_create_by(uid: @uid)
     
+    @provider       = @provider_class.find_or_create_by(uid: @uid)
     if @provider.user
       @provider.update_attribute :token, provider_token
-      
-      return @provider.user
     else
-      @user = create
-      @provider.update_attributes(token: provider_token, user: @user)
-      
-      return @user
+      @provider.update_attributes user: self, token: provider_token
     end
+    @provider
   end
   
   def create_provider provider_type, provider_token
