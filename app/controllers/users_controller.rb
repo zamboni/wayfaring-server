@@ -10,7 +10,7 @@ class UsersController < ApplicationController
     @provider = Provider.find_or_create params[:provider][:type], params[:provider][:token]
     
     if @provider.user.nil?
-      @user = User.create provider: @provider
+      @user = User.create providers: [@provider]
       @user.save
     end
     render json: {user_id: @provider.user.id, provider_id: @provider.id}

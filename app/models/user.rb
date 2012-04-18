@@ -9,7 +9,6 @@ class User
   has_many :providers, dependent: :destroy
   
   def find_or_create_provider provider_type, provider_token
-    debugger
     @provider_class = Object::const_get(provider_type.classify)::const_get('Provider')
     @uid            = @provider_class.get_uid provider_token
     
