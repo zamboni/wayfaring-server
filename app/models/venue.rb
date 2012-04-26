@@ -1,4 +1,4 @@
 class Venue
   include Mongoid::Document
-  has_many :provider_venues
+  embeds_many :provider_venues
 end

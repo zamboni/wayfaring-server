@@ -21,4 +21,14 @@ class Provider
     @provider.update_attribute(:token, provider_token)
     return @provider
   end
+  
+  def self.client_credentials
+    @credentials ||= YAML.load_file(File.join(Rails.root, 'config', 'provider_keys.yml'))
+    client_credentials = @credentials[Rails.env][provider_type.downcase]
+  end
+  
+  def self.provider_type
+    self.to_s.split("::").first
+  end
+  
 end

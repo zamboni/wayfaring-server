@@ -1,4 +1,4 @@
 class ProviderVenue
   include Mongoid::Document
-  belongs_to :venue
+  embedded_in :venue
 end
