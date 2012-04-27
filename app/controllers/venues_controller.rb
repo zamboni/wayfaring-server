@@ -3,10 +3,11 @@ class VenuesController < ApplicationController
   
   def index
     @user = User.find params[:user_id]
-    @venues = []
-    @user.providers.each do |provider|
-      @venues = provider.venue_class.process_venues provider.get_venues(params[:lat], params[:lng])
+    @venues = [].tap do |venues|
+      @user.providers.each do |provider|
+        venues.append(provider.venue_class.process_venues(provider.get_venues(params[:lat], params[:lng])))
+      end
     end
-    render json: @venues.to_json
+    render json: @venues.flatten.compact.to_json
   end
 end
