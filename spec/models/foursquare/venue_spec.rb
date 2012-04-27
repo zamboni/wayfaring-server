@@ -29,14 +29,16 @@ describe Foursquare::Venue do
       end
     end
     context 'fails' do
-      it 'returns nil' do
-        @venue_without_id = {"name"=>"Morgan stanley", "contact"=>{}, "location"=>{"address"=>"111 Wall St, Manhattan, NY 10043", "lat"=>40.69994125694707, "lng"=>-73.99903456915965, "distance"=>81, "postalCode"=>"10043", "city"=>"New York", "state"=>"NY", "country"=>"United States"}, "categories"=>[{"id"=>"4bf58dd8d48988d174941735", "name"=>"Coworking Space", "pluralName"=>"Coworking Spaces", "shortName"=>"Coworking Space", "icon"=>{"prefix"=>"https://foursquare.com/img/categories/building/default_", "sizes"=>[32, 44, 64, 88, 256], "name"=>".png"}, "primary"=>true}], "verified"=>false, "stats"=>{"checkinsCount"=>4, "usersCount"=>1, "tipCount"=>0}, "specials"=>{"count"=>0, "items"=>[]}, "hereNow"=>{"count"=>0}}
-        @found_venue = Foursquare::Venue.find_or_create @venue_without_id
+      it 'raises error' do
+        @venue_hash.delete('id')
         
-        @found_venue.should == nil
+        lambda{
+          Foursquare::Venue.find_or_create(@venue_hash)
+        }.should raise_error
       end
     end
   end
+  
   it 'finds or creates from a hash of venues' do
     venues = [{"id"=>"4f0daebfe4b01660dcc0ecc2", "name"=>"Morgan stanley", "contact"=>{}, "location"=>{"address"=>"111 Wall St, Manhattan, NY 10043", "lat"=>40.69994125694707, "lng"=>-73.99903456915965, "distance"=>81, "postalCode"=>"10043", "city"=>"New York", "state"=>"NY", "country"=>"United States"}, "categories"=>[{"id"=>"4bf58dd8d48988d174941735", "name"=>"Coworking Space", "pluralName"=>"Coworking Spaces", "shortName"=>"Coworking Space", "icon"=>{"prefix"=>"https://foursquare.com/img/categories/building/default_", "sizes"=>[32, 44, 64, 88, 256], "name"=>".png"}, "primary"=>true}], "verified"=>false, "stats"=>{"checkinsCount"=>4, "usersCount"=>1, "tipCount"=>0}, "specials"=>{"count"=>0, "items"=>[]}, "hereNow"=>{"count"=>0}}, {"id"=>"4ed3af19b634dd29955299e1", "name"=>"18th Floor Executive Wash Room", "contact"=>{}, "location"=>{"address"=>"88 Pine St, New York, NY 10005", "lat"=>40.700871258714166, "lng"=>-74.00007900359161, "distance"=>97, "postalCode"=>"10005", "city"=>"New York", "state"=>"New York", "country"=>"United States"}, "categories"=>[{"id"=>"4bf58dd8d48988d174941735", "name"=>"Coworking Space", "pluralName"=>"Coworking Spaces", "shortName"=>"Coworking Space", "icon"=>{"prefix"=>"https://foursquare.com/img/categories/building/default_", "sizes"=>[32, 44, 64, 88, 256], "name"=>".png"}, "primary"=>true}], "verified"=>false, "stats"=>{"checkinsCount"=>43, "usersCount"=>5, "tipCount"=>0}, "specials"=>{"count"=>0, "items"=>[]}, "hereNow"=>{"count"=>0}}]
     @new_venues = Foursquare::Venue.process_venues venues
