@@ -1,11 +1,9 @@
 class Foursquare::Venue < ProviderVenue
   include Mongoid::Document
-  field :provider_id
-  
-  validates :provider_id, presence: true
   
   def self.find_or_create venue_hash
-    Venue.where('provider_venues._type' => self.to_s, 'provider_venues.provider_id' => venue_hash['id']).first || Venue.create!(provider_venues: [ Foursquare::Venue.new(provider_id: venue_hash['id']) ])
+    Venue.where('provider_venues._type' => self.to_s, 'provider_venues.provider_id' => venue_hash['id']).first || 
+    Venue.create!(name: venue_hash['name'], provider_venues: [ Foursquare::Venue.new(provider_id: venue_hash['id'], name: venue_hash['name']) ])
   end
   
   def self.process_venues venues_hash
@@ -15,5 +13,4 @@ class Foursquare::Venue < ProviderVenue
       end
     end
   end
-  
 end

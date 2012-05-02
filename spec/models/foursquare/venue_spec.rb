@@ -20,12 +20,20 @@ describe Foursquare::Venue do
         @found_venue.should be
       end
       
-      it 'with a foursquare venue' do
+      it 'a venue with a name' do
+        @found_venue.name.should == 'Morgan stanley'
+      end
+      
+      it 'a foursquare venue' do
         @found_venue.provider_venues.first._type.should == 'Foursquare::Venue'
       end
       
-      it 'with a foursquare venue with proper id' do
+      it 'a foursquare venue with proper id' do
         @found_venue.provider_venues.first.provider_id.should == '4f0daebfe4b01660dcc0ecc2'  
+      end
+      
+      it 'a foursquare venue with a name' do
+        @found_venue.provider_venues.first.name.should == 'Morgan stanley'  
       end
     end
     context 'fails' do

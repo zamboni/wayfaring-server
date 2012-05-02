@@ -23,6 +23,6 @@ class Foursquare::Provider < Provider
   end
   
   def venue_class
-    Object::const_get(self.class.provider_type)::const_get('Venue')
+    "#{self.class.provider_type.classify}::Venue".constantize
   end
 end
