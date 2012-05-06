@@ -2,10 +2,11 @@
 
 FactoryGirl.define do
   factory :venue do
-  end
-  
-  factory :venue_with_foursquare, parent: :venue do
-    provider_venues { [ FactoryGirl.build(:foursquare_venue) ] }
+    name 'Venue Name'
+    
+    factory :venue_with_foursquare do
+      provider_venues { [ FactoryGirl.build(:foursquare_venue) ] }
+    end
   end
   
   factory :foursquare_venue, class: Foursquare::Venue do

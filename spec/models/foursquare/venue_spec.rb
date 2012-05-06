@@ -5,6 +5,7 @@ describe Foursquare::Venue do
     before do
       @venue_hash = {"id"=>"4f0daebfe4b01660dcc0ecc2", "name"=>"Morgan stanley", "contact"=>{}, "location"=>{"address"=>"111 Wall St, Manhattan, NY 10043", "lat"=>40.69994125694707, "lng"=>-73.99903456915965, "distance"=>81, "postalCode"=>"10043", "city"=>"New York", "state"=>"NY", "country"=>"United States"}, "categories"=>[{"id"=>"4bf58dd8d48988d174941735", "name"=>"Coworking Space", "pluralName"=>"Coworking Spaces", "shortName"=>"Coworking Space", "icon"=>{"prefix"=>"https://foursquare.com/img/categories/building/default_", "sizes"=>[32, 44, 64, 88, 256], "name"=>".png"}, "primary"=>true}], "verified"=>false, "stats"=>{"checkinsCount"=>4, "usersCount"=>1, "tipCount"=>0}, "specials"=>{"count"=>0, "items"=>[]}, "hereNow"=>{"count"=>0}}
     end
+    
     it 'finds' do
       @venue = FactoryGirl.create :venue_with_foursquare
       @venue.provider_venues.first.update_attributes(provider_id: '4f0daebfe4b01660dcc0ecc2')
@@ -16,6 +17,7 @@ describe Foursquare::Venue do
       before do
         @found_venue = Foursquare::Venue.find_or_create @venue_hash
       end
+      
       it 'a venue' do
         @found_venue.should be
       end
