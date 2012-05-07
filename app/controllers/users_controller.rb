@@ -1,14 +1,13 @@
 class UsersController < ApplicationController
-  before_filter :require_user, only: [:dashboard]
   respond_to :json
   
   def create
-    @provider = Provider.find_or_create params[:provider][:type], params[:provider][:token]
-    
-    if @provider.user.nil?
-      @user = User.create providers: [@provider]
-      @user.save
+    user      = User.find_or_create_from_provider params[:provider][:type], params[:provider][:token]
+    provider_class = Object::const_get(params[:provider][:type].classify)::const_get('Provider')
+    provider  = user.providers.where('_type' => provider_class.to_s).first
+    if user
+      render json: {user_id: user.id, provider_id: provider.id} and return
     end
-    render json: {user_id: @provider.user.id, provider_id: @provider.id}
+    render json: {error: 'Could not create user'}
   end
 end

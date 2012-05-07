@@ -5,8 +5,7 @@ describe VenuesController do
   context 'gets venues' do
     context 'Foursquare' do
       before do
-        @user = FactoryGirl.create :user
-        @foursquare = FactoryGirl.create :foursquare_provider, user: @user, uid: (mocked_uid_for 'foursquare'), token: (mocked_token_for 'foursquare')
+        @user = FactoryGirl.create :user_with_foursquare
         
         get :index, lat: 40.7, lng: -74, user_id: @user.id, format: 'json'
       end

@@ -5,8 +5,8 @@ describe Venue do
   context 'creates venues' do
     context'from foursquare' do
       before do
-        @provider = FactoryGirl.create :foursquare_provider
-        Venue.find_or_create_from_providers [@provider], 40.7, -74
+        @user = FactoryGirl.create :user_with_foursquare
+        Venue.find_or_create_from_providers [@user.providers.first], 40.7, -74
       end
       
       it 'makes a venue' do

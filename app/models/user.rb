@@ -6,19 +6,34 @@ class User
   field :name, type: String
   field :token
   
-  has_many :providers, dependent: :destroy
+  has_many :checkins
+  embeds_many :providers
   
   def find_or_create_provider provider_type, provider_token
     provider_class = Object::const_get(provider_type.classify)::const_get('Provider')
     uid            = provider_class.get_uid provider_token
     
-    provider       = provider_class.find_or_create_by(uid: uid)
-    if provider.user
+    provider = self.providers.where('_type' => provider_class.to_s).first
+    if provider
       provider.update_attribute :token, provider_token
     else
-      provider.update_attributes user: self, token: provider_token
+      provider = provider_class.new(token: provider_token, uid: uid)
+      self.providers << provider
     end
-    provider
+    provider 
+  end
+
+  def self.find_or_create_from_provider provider_type, provider_token
+    provider_class = Object::const_get(provider_type.classify)::const_get('Provider')
+    uid            = provider_class.get_uid provider_token
+    
+    user = User.where('providers.uid' => uid, 'provider._type' => provider_class.to_s).first
+    if user
+      user.providers.where('_type' => provider_class.to_s).first.update_attribute :token, provider_token
+    else
+      user = User.create!(providers: [ provider_class.new(token: provider_token, uid: uid) ])
+    end
+    user 
   end
   
   def create_provider provider_type, provider_token

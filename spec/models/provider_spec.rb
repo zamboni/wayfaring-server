@@ -5,20 +5,19 @@ describe Provider do
   context 'creates a provider of type' do
     context 'Foursquare' do
       before do
-        @provider = Provider.find_or_create 'foursquare', mocked_token_for('foursquare')
-        @provider.reload
+        @user = User.find_or_create_from_provider 'foursquare', mocked_token_for('foursquare')
       end
       
       it 'with class' do
-        @provider.class.should == Foursquare::Provider
+        @user.providers.first.class.should == Foursquare::Provider
       end
       
       it 'with uid' do
-        @provider.uid.should == mocked_uid_for('foursquare')
+        @user.providers.first.uid.should == mocked_uid_for('foursquare')
       end
       
       it 'with token' do
-        @provider.token.should == mocked_token_for('foursquare')
+        @user.providers.first.token.should == mocked_token_for('foursquare')
       end
     end
   end
