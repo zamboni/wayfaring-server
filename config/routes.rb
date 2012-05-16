@@ -3,5 +3,6 @@ RebelFoundation::Application.routes.draw do
     put 'update_password'
     resources :providers, controller: 'users/providers'
   end
+  resources :checkins
   resources :venues
 end

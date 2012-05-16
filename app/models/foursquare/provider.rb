@@ -5,6 +5,10 @@ class Foursquare::Provider < Provider
     client_credentials = super
     {client_id: client_credentials['consumer_key'], client_secret: client_credentials['consumer_secret'], v: client_credentials['api_date']}
   end
+
+  def user_credentials
+    {oauth_token: token}
+  end
   
   def self.get_uid provider_token
     options = {oauth_token: provider_token}
@@ -21,7 +25,7 @@ class Foursquare::Provider < Provider
       return response['response']['venues']
     end
   end
-  
+
   def venue_class
     "#{self.class.provider_type.classify}::Venue".constantize
   end

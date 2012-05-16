@@ -9,8 +9,7 @@ describe CheckinsController do
         @venue = FactoryGirl.create :venue_with_foursquare
         put :create, checkin: {user_id: @user.id, venue_id: @venue.id}
       end
-      it 'returns a checkin object'
-      
+      it 'returns a checkin object'      
     end
   end
 end
