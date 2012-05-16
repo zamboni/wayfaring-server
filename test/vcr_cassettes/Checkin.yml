@@ -1,0 +1,88 @@
+---
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :post
+    uri: https://api.foursquare.com:443/v2/checkins/add?oauth_token=&venueId=1234&broadcast=public
+    body: !!null 
+    headers: !!null 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 400
+      message: Bad Request
+    headers:
+      access-control-allow-origin:
+      - ! '*'
+      cache-control:
+      - no-cache, private, no-store
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Mon, 14 May 2012 20:50:43 GMT
+      expires:
+      - Mon, 14 May 2012 20:50:43 GMT
+      pragma:
+      - no-cache
+      server:
+      - nginx/1.1.17
+      content-length:
+      - '176'
+      connection:
+      - Close
+    body: ! '{"meta":{"code":400,"errorType":"invalid_auth","errorDetail":"Missing
+      access credentials. See https:\/\/developer.foursquare.com\/docs\/oauth.html
+      for details."},"response":{}}'
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :post
+    uri: https://api.foursquare.com:443/v2/checkins/add?oauth_token=UJ4S0DJFXU00KFVFF1T4CX5FNFFD4JOSIVT52HGPM3YXC2OV&venueId=1234&broadcast=public
+    body: !!null 
+    headers: !!null 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      access-control-allow-origin:
+      - ! '*'
+      cache-control:
+      - no-cache, private, no-store
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Wed, 16 May 2012 02:21:04 GMT
+      expires:
+      - Wed, 16 May 2012 02:21:04 GMT
+      pragma:
+      - no-cache
+      server:
+      - nginx/1.1.17
+      x-ratelimit-limit:
+      - '500'
+      x-ratelimit-remaining:
+      - '499'
+      content-length:
+      - '3685'
+      connection:
+      - Close
+    body: ! '{"meta":{"code":200,"errorType":"deprecated","errorDetail":"Please provide
+      an API version to avoid future errors.See http:\/\/bit.ly\/vywCav"},"notifications":[{"type":"notificationTray","item":{"unreadCount":0}},{"type":"message","item":{"message":"OK!
+      We''ve got you @ Bar 29. You''ve been here 1 time."}},{"type":"mayorship","item":{"type":"nochange","checkins":6,"user":{"id":"15877075","firstName":"Jesse","lastName":"L.","photo":"https:\/\/is0.4sqi.net\/userpix_thumbs\/2BV3O3VT1YIWNWMC.jpg","gender":"male","homeCity":"NY","bio":"","canonicalUrl":"https:\/\/foursquare.com\/user\/15877075","contact":{}},"message":"Jesse
+      L. is the Mayor of Bar 29.","image":"https:\/\/is0.4sqi.net\/userpix_thumbs\/2BV3O3VT1YIWNWMC.jpg"}},{"type":"tip","item":{"tip":{"id":"4ec843ec30f8b09c0cf671ba","createdAt":1321747436,"text":"\"You
+      can''t get pregnant from scissoring.\"","todo":{"count":0},"done":{"count":5},"user":{"id":"1342846","firstName":"Katie","lastName":"R.","photo":"https:\/\/is1.4sqi.net\/userpix_thumbs\/H0ENVU2ZHONZ1P2I.jpg","gender":"female","homeCity":"New
+      York, NY","bio":"","canonicalUrl":"https:\/\/foursquare.com\/kt_reynolds","contact":{"twitter":"kt_reynolds","facebook":"5500875"}}},"name":"Popular
+      tip"}},{"type":"leaderboard","item":{"leaderboard":[{"user":{"id":"20566366","firstName":"RebelHold","lastName":"Test","photo":"https:\/\/is1.4sqi.net\/userpix_thumbs\/Q0VE5U4RDXS52EU1.png","gender":"male","homeCity":"Phoenix","bio":"","canonicalUrl":"https:\/\/foursquare.com\/user\/20566366","relationship":"self","contact":{"email":"test@rebelhold.com"}},"scores":{"recent":41,"max":41,"goal":50,"checkinsCount":4},"rank":1}],"message":"With
+      that last check-in you''ve hit your best week ever!","scores":[{"points":4,"icon":"https:\/\/foursquare.com\/img\/points\/discovery.png","message":"Welcome!
+      This is your first check-in in the state of New York!"},{"points":3,"icon":"https:\/\/foursquare.com\/img\/points\/discovery-venue3.png","message":"First
+      time at Bar 29"},{"points":4,"icon":"https:\/\/foursquare.com\/img\/points\/category-nightlife.png","message":"Your
+      first Bar"},{"points":4,"icon":"https:\/\/foursquare.com\/img\/points\/travel.png","message":"2568
+      miles since last check-in"}],"total":15}},{"type":"score","item":{"scores":[{"points":4,"icon":"https:\/\/foursquare.com\/img\/points\/discovery.png","message":"Welcome!
+      This is your first check-in in the state of New York!"},{"points":3,"icon":"https:\/\/foursquare.com\/img\/points\/discovery-venue3.png","message":"First
+      time at Bar 29"},{"points":4,"icon":"https:\/\/foursquare.com\/img\/points\/category-nightlife.png","message":"Your
+      first Bar"},{"points":4,"icon":"https:\/\/foursquare.com\/img\/points\/travel.png","message":"2568
+      miles since last check-in"}],"total":15}}],"response":{"checkin":{"id":"4fb30f10e4b0bcdc7fc200e5","createdAt":1337134864,"type":"checkin","timeZone":"America\/New_York","timeZoneOffset":-240,"venue":{"id":"3fd66200f964a52060e71ee3","name":"Bar
+      29","contact":{"phone":"2127790306","formattedPhone":"(212) 779-0306"},"location":{"address":"405
+      Third Avenue","crossStreet":"btw 28th and 29th St","lat":40.742407,"lng":-73.980599,"postalCode":"10016","city":"New
+      York","state":"NY","country":"United States"},"categories":[{"id":"4bf58dd8d48988d116941735","name":"Bar","pluralName":"Bars","shortName":"Bar","icon":"https:\/\/foursquare.com\/img\/categories\/nightlife\/bar.png","parents":["Nightlife
+      Spots"],"primary":true}],"verified":true,"stats":{"checkinsCount":2219,"usersCount":1427,"tipCount":23},"beenHere":{"count":0}},"photos":{"count":0,"items":[]},"comments":{"count":0,"items":[]},"source":{"name":"facebook_refactor","url":"http:\/\/rebelhold.com"}}}}'
+    http_version: '1.1'
