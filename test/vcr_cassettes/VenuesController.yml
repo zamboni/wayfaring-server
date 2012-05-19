@@ -261,3 +261,79 @@
       Columbia Heights","contact":{},"location":{"address":"160 Columbia Heights","lat":40.698449,"lng":-73.996528,"distance":340,"city":"Brooklyn","state":"NY","country":"United
       States"},"categories":[],"verified":false,"stats":{"checkinsCount":88,"usersCount":19,"tipCount":1},"specials":{"count":0,"items":[]},"hereNow":{"count":0}}]}}'
     http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: https://graph.facebook.com:443/search?center=40.7,-74&distance=1000&type=place&access_token=BAAErTBz7PZB0BAMLiGa1zq1CYA9sflZCkZA66L0TVdpH2p73xWK3VqvYrRIkzR23n6PmvI4cyqZBMvTMpYY0iARqOVowEz0tiZBcVRE0QoSrPG4wYAY9fj40dvIluyL4xng9DjJ3RqgZDZD
+    body: !!null 
+    headers: !!null 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      access-control-allow-origin:
+      - ! '*'
+      cache-control:
+      - private, no-cache, no-store, must-revalidate
+      content-type:
+      - text/javascript; charset=UTF-8
+      etag:
+      - ! '"dd35078ffeae4909708c5c74cb4bf3a79673869f"'
+      expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      pragma:
+      - no-cache
+      x-fb-rev:
+      - '558818'
+      x-fb-debug:
+      - gIo+7A1kNDhFzYZYBod/oma0q6pH0r5x6uqh4sjXiLw=
+      date:
+      - Thu, 17 May 2012 03:46:18 GMT
+      content-length:
+      - '5497'
+    body: ! '{"data":[{"name":"Brooklyn Bridge","category":"Interest","location":{"city":"New
+      York","state":"NY","country":"United States","zip":"10005","latitude":40.707681252133,"longitude":-73.999729093941},"id":"111871368829109"},{"name":"Brooklyn
+      Heights Historic District","category":"Local business","location":{"city":"Brooklyn","state":"NY","country":"United
+      States","zip":"11201","latitude":40.695277499228,"longitude":-73.994829579884},"id":"111038568950133"},{"name":"Brooklyn
+      Heights Promenade","category":"Local business","location":{"city":"Brooklyn","state":"NY","country":"United
+      States","zip":"11201","latitude":40.696132434737,"longitude":-73.997627517158},"id":"147923471892981"},{"name":"South
+      Street Seaport","category":"Attractions\/things to do","location":{"street":"19
+      Fulton Street, suite 201","city":"New York","state":"NY","country":"United States","zip":"10038","latitude":40.705808301665,"longitude":-74.002875279914},"id":"20796366834"},{"name":"The
+      River Caf\u00e9","category":"Restaurant\/cafe","location":{"street":"1 Water
+      Street","city":"Brooklyn","state":"NY","country":"United States","zip":"11201","latitude":40.703808641919,"longitude":-73.995129735637},"id":"89119719309"},{"name":"Beekman
+      Beer Garden Beach Club","category":"Bar","location":{"street":"89 South Street,
+      north side of Pier 17 near Beekman Street","city":"New York","state":"NY","country":"United
+      States","zip":"10038","latitude":40.705631707409,"longitude":-74.001000408075},"id":"229432990407360"},{"name":"Brooklyn
+      Ice Cream Factory","category":"Restaurant\/cafe","location":{"street":"1 Water
+      Street","city":"Brooklyn","state":"NY","country":"United States","zip":"11201","latitude":40.703215326916,"longitude":-73.994848828481},"id":"51082731884"},{"name":"Grimaldi''s
+      Pizza","category":"Local business","location":{"street":"19 Old Fulton Street","city":"Brooklyn","state":"NY","country":"United
+      States","zip":"11201","latitude":40.702618465523,"longitude":-73.993703713921},"id":"143993815634140"},{"name":"Sequoia
+      NY","category":"Restaurant\/cafe","location":{"street":"Pier 17, South Street
+      Seaport","city":"New York","state":"NY","country":"United States","zip":"10038","latitude":40.705085506076,"longitude":-74.001506530022},"id":"10150140814925257"},{"name":"Pier
+      17","category":"Local business","location":{"city":"New York","state":"NY","country":"United
+      States","zip":"80215","latitude":40.705442996928,"longitude":-74.001946115685},"id":"126499217399502"},{"name":"Uno
+      Chicago Grill | Seaport","category":"Restaurant\/cafe","location":{"street":"89
+      South Street","city":"New York","state":"NY","country":"United States","zip":"10038","latitude":40.705698652868,"longitude":-74.003211125984},"id":"316174805873"},{"name":"Cabana
+      Nuevo Latino","category":"Local business","location":{"city":"New York","state":"NY","country":"United
+      States","latitude":40.705310259403,"longitude":-74.002151613199},"id":"156594634356963"},{"name":"Cabanas
+      at South Street Seaport","category":"Local business","location":{"street":"89
+      South Street Pier 17 New York","city":"New York","state":"NY","country":"United
+      States","zip":"10038 ","latitude":40.7053841444,"longitude":-74.00192436436},"id":"164644513590216"},{"name":"111
+      Wall Street Heliport","category":"Local business","location":{"street":"111
+      Wall Street","city":"New York","state":"NY","country":"United States","latitude":40.703436207964,"longitude":-74.008663572746},"id":"135913596450510"},{"name":"Pier
+      11","category":"Local business","location":{"street":"South Street and Gouverneur
+      Lane","city":"New York","state":"NY","country":"United States","zip":"10005","latitude":40.703385235157,"longitude":-74.006261676785},"id":"155128891169071"},{"name":"South
+      Street Sea Port, New York City","category":"Local business","location":{"city":"New
+      York","state":"NY","country":"United States","zip":"11204","latitude":40.705800375464,"longitude":-74.002758516438},"id":"138499749526874"},{"name":"Johnny
+      Rockets","category":"Local business","location":{"street":"89 South St                              Ste
+      17","city":"New York","state":"NY","country":"United States","zip":"10038","latitude":40.705964037022,"longitude":-74.003161392226},"id":"214854841887409"},{"name":"DUMBO,
+      Brooklyn","category":"Local business","location":{"city":"Brooklyn","state":"NY","country":"United
+      States","zip":"11201","latitude":40.702739858081,"longitude":-73.989550560923},"id":"124869040893891"},{"name":"Heartland
+      Brewery","category":"Local business","location":{"street":"93 South St","city":"New
+      York","state":"NY","country":"United States","zip":"10038","latitude":40.706486602676,"longitude":-74.003178920185},"id":"104545429639499"},{"name":"Five
+      Guys Famous Burgers & Fries","category":"Local business","location":{"street":"138
+      Montague St","city":"Brooklyn","state":"NY","country":"United States","zip":"11201-3518","latitude":40.694376454208,"longitude":-73.992481973342},"id":"104941932883152"},{"name":"Successful
+      and Victorious Youth, Inc.","category":"Non-profit organization","location":{"street":"P.O.
+      Box 25244","city":"New York","state":"NY","country":"United States","zip":"11202","latitude":40.6959,"longitude":-73.9934},"id":"69611557368"}],"paging":{"next":"https:\/\/graph.facebook.com\/search?center=40.7,-74&distance=1000&type=place&access_token=BAAErTBz7PZB0BAMLiGa1zq1CYA9sflZCkZA66L0TVdpH2p73xWK3VqvYrRIkzR23n6PmvI4cyqZBMvTMpYY0iARqOVowEz0tiZBcVRE0QoSrPG4wYAY9fj40dvIluyL4xng9DjJ3RqgZDZD&limit=25&offset=25&__after_id=69611557368"}}'
+    http_version: '1.1'

@@ -30,5 +30,12 @@ class Provider
   def self.provider_type
     self.to_s.split("::").first
   end
+
+  def venue_class
+    "#{self.class.provider_type.classify}::Venue".constantize
+  end
   
+  def user_credentials
+    {oauth_token: token}
+  end 
 end

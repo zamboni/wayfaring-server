@@ -4,7 +4,7 @@ class Venue
   has_many :checkins
   
   field :name
-  
+    
   validates :name, presence: true
   
   def self.find_or_create_from_providers providers, lat, lng

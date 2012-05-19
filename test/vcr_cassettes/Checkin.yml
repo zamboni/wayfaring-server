@@ -86,3 +86,103 @@
       York","state":"NY","country":"United States"},"categories":[{"id":"4bf58dd8d48988d116941735","name":"Bar","pluralName":"Bars","shortName":"Bar","icon":"https:\/\/foursquare.com\/img\/categories\/nightlife\/bar.png","parents":["Nightlife
       Spots"],"primary":true}],"verified":true,"stats":{"checkinsCount":2219,"usersCount":1427,"tipCount":23},"beenHere":{"count":0}},"photos":{"count":0,"items":[]},"comments":{"count":0,"items":[]},"source":{"name":"facebook_refactor","url":"http:\/\/rebelhold.com"}}}}'
     http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :post
+    uri: https://graph.facebook.com:443/me/checkins?oauth_token=BAAErTBz7PZB0BAMLiGa1zq1CYA9sflZCkZA66L0TVdpH2p73xWK3VqvYrRIkzR23n6PmvI4cyqZBMvTMpYY0iARqOVowEz0tiZBcVRE0QoSrPG4wYAY9fj40dvIluyL4xng9DjJ3RqgZDZD&place=111871368829109
+    body: !!null 
+    headers: !!null 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 400
+      message: Bad Request
+    headers:
+      access-control-allow-origin:
+      - ! '*'
+      cache-control:
+      - no-store
+      content-type:
+      - text/javascript; charset=UTF-8
+      expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      pragma:
+      - no-cache
+      www-authenticate:
+      - OAuth "Facebook Platform" "invalid_request" "(#100) The parameter coordinates
+        is required"
+      x-fb-rev:
+      - '559081'
+      x-fb-debug:
+      - 0WPMKbaXiV++vT4x4Zbvg4oogkAMwUCSMqKc92+R5Ug=
+      date:
+      - Thu, 17 May 2012 06:37:13 GMT
+      content-length:
+      - '103'
+    body: ! '{"error":{"message":"(#100) The parameter coordinates is required","type":"OAuthException","code":100}}'
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :post
+    uri: https://graph.facebook.com:443/me/checkins?oauth_token=BAAErTBz7PZB0BAMLiGa1zq1CYA9sflZCkZA66L0TVdpH2p73xWK3VqvYrRIkzR23n6PmvI4cyqZBMvTMpYY0iARqOVowEz0tiZBcVRE0QoSrPG4wYAY9fj40dvIluyL4xng9DjJ3RqgZDZD&place=111871368829109&coordinates[latitude]=&coordinates[longitude]=
+    body: !!null 
+    headers: !!null 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 400
+      message: Bad Request
+    headers:
+      access-control-allow-origin:
+      - ! '*'
+      cache-control:
+      - no-store
+      content-type:
+      - text/javascript; charset=UTF-8
+      expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      pragma:
+      - no-cache
+      www-authenticate:
+      - OAuth "Facebook Platform" "invalid_request" "(#160) Invalid coordinates.  Coordinates
+        must contain at least latitude, and longitude."
+      x-fb-rev:
+      - '559081'
+      x-fb-debug:
+      - p/APJtVSDk42MNTz+V22ClURMac8pLskKk6USsRrHO0=
+      date:
+      - Thu, 17 May 2012 07:21:06 GMT
+      content-length:
+      - '146'
+    body: ! '{"error":{"message":"(#160) Invalid coordinates.  Coordinates must contain
+      at least latitude, and longitude.","type":"OAuthException","code":160}}'
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :post
+    uri: https://graph.facebook.com:443/me/checkins?oauth_token=BAAErTBz7PZB0BAMLiGa1zq1CYA9sflZCkZA66L0TVdpH2p73xWK3VqvYrRIkzR23n6PmvI4cyqZBMvTMpYY0iARqOVowEz0tiZBcVRE0QoSrPG4wYAY9fj40dvIluyL4xng9DjJ3RqgZDZD&place=111871368829109&coordinates[latitude]=40.69994125694707&coordinates[longitude]=73.99903456915965
+    body: !!null 
+    headers: !!null 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      access-control-allow-origin:
+      - ! '*'
+      cache-control:
+      - private, no-cache, no-store, must-revalidate
+      content-type:
+      - text/javascript; charset=UTF-8
+      expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      pragma:
+      - no-cache
+      x-fb-rev:
+      - '559081'
+      x-fb-debug:
+      - pMiH6pQEp2q36yftlDlL/vK16toEYpUEJlMIzlygHt0=
+      date:
+      - Thu, 17 May 2012 16:56:05 GMT
+      content-length:
+      - '24'
+    body: ! '{"id":"236851126423315"}'
+    http_version: '1.1'

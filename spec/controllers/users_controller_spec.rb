@@ -13,6 +13,15 @@ describe UsersController do
           @response['user_id'].should be
         end
       end
+      context 'Facebook' do
+        before do
+          get :create, provider: {type: 'facebook', token: mocked_token_for('facebook')}, format: 'json'
+          @response = ActiveSupport::JSON.decode response.body
+        end
+        it 'returns a user_id' do
+          @response['user_id'].should be
+        end
+      end
     end
   end
 end

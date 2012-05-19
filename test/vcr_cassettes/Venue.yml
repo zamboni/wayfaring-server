@@ -120,3 +120,106 @@
       Smoking Circle","contact":{},"location":{"lat":40.699796,"lng":-73.99595493333334,"distance":342,"country":"United
       States"},"categories":[],"verified":false,"stats":{"checkinsCount":72,"usersCount":10,"tipCount":1},"specials":{"count":0,"items":[]},"hereNow":{"count":0}}]}}'
     http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: https://graph.facebook.com:443/venues/search?ll=40.7,-74&consumer_key=329080880447469&consumer_secret=5085d5e02f9bd7aa8d146bbcd63697db&callback_url=http://localhost:3000
+    body: !!null 
+    headers: !!null 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      access-control-allow-origin:
+      - ! '*'
+      cache-control:
+      - private, no-cache, no-store, must-revalidate
+      content-type:
+      - text/javascript; charset=UTF-8
+      etag:
+      - ! '"69121f22ba66ae61929fe61690cc5aabf71d5cac"'
+      expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      pragma:
+      - no-cache
+      x-fb-rev:
+      - '558274'
+      x-fb-debug:
+      - 6EpvhVziNWcZQ/nsrq9A+xJ7PIg196do+Xit4nTElAc=
+      date:
+      - Wed, 16 May 2012 03:55:12 GMT
+      content-length:
+      - '321'
+    body: ! '{"data":[{"name":"Holland Marie Peterson","id":"1261068099"}],"paging":{"next":"https:\/\/graph.facebook.com\/venues\/search?ll=40.7,-74&consumer_key=329080880447469&consumer_secret=5085d5e02f9bd7aa8d146bbcd63697db&callback_url=http\u00253A\u00252F\u00252Flocalhost\u00253A3000&limit=25&offset=25&__after_id=1261068099"}}'
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: https://graph.facebook.com:443/search?center=40.7,-74&distance=1000&type=place&access_token=BAAErTBz7PZB0BAMLiGa1zq1CYA9sflZCkZA66L0TVdpH2p73xWK3VqvYrRIkzR23n6PmvI4cyqZBMvTMpYY0iARqOVowEz0tiZBcVRE0QoSrPG4wYAY9fj40dvIluyL4xng9DjJ3RqgZDZD
+    body: !!null 
+    headers: !!null 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      access-control-allow-origin:
+      - ! '*'
+      cache-control:
+      - private, no-cache, no-store, must-revalidate
+      content-type:
+      - text/javascript; charset=UTF-8
+      etag:
+      - ! '"5436be23c6df5d6527da72f25c89f873b9d71012"'
+      expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      pragma:
+      - no-cache
+      x-fb-rev:
+      - '558274'
+      x-fb-debug:
+      - hrO7IYlfv8Fd3O2myq3G0xctUGRoX8ZdRmXw+ggm1CY=
+      date:
+      - Wed, 16 May 2012 03:59:49 GMT
+      content-length:
+      - '5038'
+    body: ! '{"data":[{"name":"Brooklyn Bridge","category":"Interest","location":{"city":"New
+      York","state":"NY","country":"United States","zip":"10005","latitude":40.707681252133,"longitude":-73.999729093941},"id":"111871368829109"},{"name":"The
+      River Caf\u00e9","category":"Restaurant\/cafe","location":{"street":"1 Water
+      Street","city":"Brooklyn","state":"NY","country":"United States","zip":"11201","latitude":40.703808641919,"longitude":-73.995129735637},"id":"89119719309"},{"name":"Brooklyn
+      Bridge Park","category":"Local business","location":{"city":"Brooklyn","state":"NY","country":"United
+      States","latitude":40.702781909089,"longitude":-73.99342409526},"id":"131440186900532"},{"name":"South
+      Street Seaport","category":"Attractions\/things to do","location":{"street":"19
+      Fulton Street, suite 201","city":"New York","state":"NY","country":"United States","zip":"10038","latitude":40.705808301665,"longitude":-74.002875279914},"id":"20796366834"},{"name":"Brooklyn
+      Heights Promenade","category":"Local business","location":{"city":"Brooklyn","state":"NY","country":"United
+      States","zip":"11201","latitude":40.696132434737,"longitude":-73.997627517158},"id":"147923471892981"},{"name":"IBUniversity","category":"Education","location":{"street":"120
+      Wall Street","city":"New York","state":"NY","country":"United States","zip":"10005","latitude":40.7043495,"longitude":-74.0062637},"id":"383008525044215"},{"name":"MGID","category":"Website","location":{"street":"77
+      Water Street, Suite 834","city":"New York","state":"NY","country":"United States","zip":"10005","latitude":40.7044487,"longitude":-74.0084305},"id":"152193621459152"},{"name":"Brooklyn
+      Heights Historic District","category":"Local business","location":{"city":"Brooklyn","state":"NY","country":"United
+      States","zip":"11201","latitude":40.695277499228,"longitude":-73.994829579884},"id":"111038568950133"},{"name":"DUMBO,
+      Brooklyn","category":"Local business","location":{"city":"Brooklyn","state":"NY","country":"United
+      States","zip":"11201","latitude":40.702739858081,"longitude":-73.989550560923},"id":"124869040893891"},{"name":"Kevin
+      Powell","category":"Public figure","location":{"street":"137 Montague Street,
+      PMB 221","city":"Brooklyn","state":"NY","country":"United States","zip":"11201","latitude":40.69466,"longitude":-73.99386},"id":"31786949677"},{"name":"Beekman
+      Beer Garden Beach Club","category":"Bar","location":{"street":"89 South Street,
+      north side of Pier 17 near Beekman Street","city":"New York","state":"NY","country":"United
+      States","zip":"10038","latitude":40.705631707409,"longitude":-74.001000408075},"id":"229432990407360"},{"name":"UNICEF
+      USA","category":"Non-profit organization","location":{"street":"125 Maiden Lane","city":"New
+      York","state":"NY","country":"United States","zip":"10038","latitude":40.70642,"longitude":-74.00641},"id":"81517275796"},{"name":"Farsi
+      ETC","category":"Bank\/financial institution","location":{"street":"40 WALL
+      STREET","city":"New York","state":"NY","country":"United States","zip":"10005","latitude":40.70586,"longitude":-74.00713},"id":"246911292038213"},{"name":"DivePhotoGuide
+      - Underwater Photography & Video","category":"Media\/news\/publishing","location":{"street":"63
+      Montague St","city":"Brooklyn","state":"NY","country":"United States","zip":"10028","latitude":40.69548,"longitude":-73.99679},"id":"7891908998"},{"name":"Catalpa
+      NYC","category":"Concert venue","location":{"street":"Randall''s Island","city":"New
+      York","state":"NY","country":"United States","zip":"10035","latitude":40.70108,"longitude":-74.01163},"id":"124524434319695"},{"name":"LocalVox
+      Media","category":"Consulting\/business services","location":{"street":"5 Hanover
+      Sq ","city":"New York","state":"NY","country":"United States","zip":"10005","latitude":40.70463,"longitude":-74.00959},"id":"124153927704496"},{"name":"YoYoNation.com","category":"Company","location":{"street":"40
+      Water St. Fl. 3","city":"New York","state":"NY","country":"United States","zip":"10004","latitude":40.70333,"longitude":-74.0101},"id":"22230215545"},{"name":"Brooklyn
+      Ice Cream Factory","category":"Restaurant\/cafe","location":{"street":"1 Water
+      Street","city":"Brooklyn","state":"NY","country":"United States","zip":"11201","latitude":40.703215326916,"longitude":-73.994848828481},"id":"51082731884"},{"name":"Pier
+      17","category":"Local business","location":{"city":"New York","state":"NY","country":"United
+      States","zip":"80215","latitude":40.705442996928,"longitude":-74.001946115685},"id":"126499217399502"},{"name":"New
+      York Photo Festival","category":"Organization","location":{"street":"37 Main
+      Street","city":"Brooklyn","state":"NY","country":"United States","zip":"11201","latitude":40.70305,"longitude":-73.99069},"id":"333711303340202"}],"paging":{"next":"https:\/\/graph.facebook.com\/search?center=40.7,-74&distance=1000&type=place&access_token=BAAErTBz7PZB0BAMLiGa1zq1CYA9sflZCkZA66L0TVdpH2p73xWK3VqvYrRIkzR23n6PmvI4cyqZBMvTMpYY0iARqOVowEz0tiZBcVRE0QoSrPG4wYAY9fj40dvIluyL4xng9DjJ3RqgZDZD&limit=25&offset=25&__after_id=333711303340202"}}'
+    http_version: '1.1'

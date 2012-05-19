@@ -6,7 +6,11 @@ FactoryGirl.define do
     email                  'test@example.com'
 
     factory :user_with_foursquare do
-      providers { [ FactoryGirl.build(:foursquare_provider)]}    	
+      providers { [ FactoryGirl.build(:foursquare_provider)]}     
+    end
+
+    factory :user_with_facebook do
+      providers { [ FactoryGirl.build(:facebook_provider)]}     
     end
   end
 end
