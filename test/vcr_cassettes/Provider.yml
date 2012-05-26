@@ -110,3 +110,172 @@
       - '312'
     body: ! '{"id":"100002952898027","name":"RebelHold TestAccount","first_name":"RebelHold","last_name":"TestAccount","link":"http:\/\/www.facebook.com\/profile.php?id=100002952898027","gender":"male","email":"test\u0040rebelhold.com","timezone":-7,"locale":"en_US","verified":true,"updated_time":"2011-12-04T16:02:51+0000"}'
     http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: https://www.googleapis.com:443/oauth2/v1/userinfo?oauth_token=kACAH-1Ng2nSFmlgAyXC1t94bZUVuuUv9rvB8SwnpAjIYPY4-6dz5jUJvGrnlAWl7dnmXsfpEEHtL2WZQUGUoyg1WBvWQbiDPq1myXoWOI5tiu1SZ2oNf_q268
+    body: !!null 
+    headers: !!null 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 401
+      message: Unauthorized
+    headers:
+      www-authenticate:
+      - GoogleLogin realm="https://www.google.com/accounts/ClientLogin", service="lso"
+      content-type:
+      - application/json; charset=UTF-8
+      date:
+      - Sat, 19 May 2012 08:00:07 GMT
+      expires:
+      - Sat, 19 May 2012 08:00:07 GMT
+      cache-control:
+      - private, max-age=0
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+      server:
+      - GSE
+    body: ! "{\n \"error\": {\n  \"errors\": [\n   {\n    \"domain\": \"com.google.auth\",\n
+      \   \"reason\": \"invalidAuthentication\",\n    \"message\": \"invalid header\",\n
+      \   \"locationType\": \"header\",\n    \"location\": \"Authorization\"\n   }\n
+      \ ],\n  \"code\": 401,\n  \"message\": \"invalid header\"\n }\n}\n"
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: https://www.googleapis.com:443/oauth2/v1/userinfo?oauth_token=ya29.AHES6ZTbRWhibETbgCnIVpolUvDg0JP6W5TbDTVYTjn07tyI8w
+    body: !!null 
+    headers: !!null 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 401
+      message: Unauthorized
+    headers:
+      www-authenticate:
+      - AuthSub realm="https://www.google.com/accounts/AuthSubRequest"
+      content-type:
+      - application/json; charset=UTF-8
+      date:
+      - Mon, 21 May 2012 02:04:36 GMT
+      expires:
+      - Mon, 21 May 2012 02:04:36 GMT
+      cache-control:
+      - private, max-age=0
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+      server:
+      - GSE
+    body: ! "{\n \"error\": {\n  \"errors\": [\n   {\n    \"domain\": \"com.google.auth\",\n
+      \   \"reason\": \"invalidAuthentication\",\n    \"message\": \"invalid token\",\n
+      \   \"locationType\": \"header\",\n    \"location\": \"Authorization\"\n   }\n
+      \ ],\n  \"code\": 401,\n  \"message\": \"invalid token\"\n }\n}\n"
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: https://www.googleapis.com:443/oauth2/v1/userinfo?access_token=ya29.AHES6ZTbRWhibETbgCnIVpolUvDg0JP6W5TbDTVYTjn07tyI8w
+    body: !!null 
+    headers: !!null 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 401
+      message: Unauthorized
+    headers:
+      www-authenticate:
+      - AuthSub realm="https://www.google.com/accounts/AuthSubRequest"
+      content-type:
+      - application/json; charset=UTF-8
+      date:
+      - Mon, 21 May 2012 02:17:34 GMT
+      expires:
+      - Mon, 21 May 2012 02:17:34 GMT
+      cache-control:
+      - private, max-age=0
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+      server:
+      - GSE
+    body: ! "{\n \"error\": {\n  \"errors\": [\n   {\n    \"domain\": \"com.google.auth\",\n
+      \   \"reason\": \"invalidAuthentication\",\n    \"message\": \"invalid token\",\n
+      \   \"locationType\": \"header\",\n    \"location\": \"Authorization\"\n   }\n
+      \ ],\n  \"code\": 401,\n  \"message\": \"invalid token\"\n }\n}\n"
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: https://www.googleapis.com:443/oauth2/v1/userinfo?access_token=ya29.AHES6ZRuI9FL7zOHCgum9YZTWJXNK6W8kCxXI2vH7UnI0rA
+    body: !!null 
+    headers: !!null 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 401
+      message: Unauthorized
+    headers:
+      www-authenticate:
+      - AuthSub realm="https://www.google.com/accounts/AuthSubRequest"
+      content-type:
+      - application/json; charset=UTF-8
+      date:
+      - Mon, 21 May 2012 03:39:44 GMT
+      expires:
+      - Mon, 21 May 2012 03:39:44 GMT
+      cache-control:
+      - private, max-age=0
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+      server:
+      - GSE
+    body: ! "{\n \"error\": {\n  \"errors\": [\n   {\n    \"domain\": \"com.google.auth\",\n
+      \   \"reason\": \"invalidAuthentication\",\n    \"message\": \"invalid token\",\n
+      \   \"locationType\": \"header\",\n    \"location\": \"Authorization\"\n   }\n
+      \ ],\n  \"code\": 401,\n  \"message\": \"invalid token\"\n }\n}\n"
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: https://www.googleapis.com:443/oauth2/v1/userinfo?access_token=ya29.AHES6ZRTjoNJSnBOzqAt1ylLdIxG1GPp5P9yODyKWj7BRiMX
+    body: !!null 
+    headers: !!null 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      cache-control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      pragma:
+      - no-cache
+      expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      date:
+      - Mon, 21 May 2012 08:09:51 GMT
+      content-type:
+      - application/json; charset=UTF-8
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+      server:
+      - GSE
+    body: ! "{\n \"id\": \"117314209189492854670\",\n \"email\": \"test@rebelhold.com\",\n
+      \"verified_email\": true,\n \"name\": \"Test User\",\n \"given_name\": \"Test\",\n
+      \"family_name\": \"User\"\n}\n"
+    http_version: '1.1'

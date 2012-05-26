@@ -8,20 +8,12 @@ PROVIDERS = {
     uid: '100002952898027'
   },
   google:     {
-    token: 'change me', 
-    uid: 'notreal'
+    token: 'ya29.AHES6ZQMGncI8x4V24-Tcz3R_uQnRdFAlAsMf9qr4PhOLno', 
+    uid: '117314209189492854670',
+    code: '4/P2mIOzikPZSYIGHe5a6_uvYJB7Ar.AtGHSsxydgYfuJJVnL49Cc-CSGTvbgI',
+    refresh_token: '1/ohoYDw8yVHiqtTzUPq0rqRcj705bIZKkl1iopCidVvs'
   }
 }
-  
-def mock_provider_oauths
-  PROVIDERS.each do |(provider, credentials)|
-    OmniAuth.config.add_mock(provider.to_sym, {
-      "credentials" => {"token" => credentials[:token]},
-      "provider"=> provider,
-      'uid' => credentials[:uid]
-    })
-  end
-end
   
 def mocked_uid_for provider
   PROVIDERS[provider.to_sym][:uid]
@@ -30,3 +22,12 @@ end
 def mocked_token_for provider
   PROVIDERS[provider.to_sym][:token]
 end
+
+def mocked_code_for provider
+  PROVIDERS[provider.to_sym][:code]
+end
+
+def mocked_refresh_token_for provider
+  PROVIDERS[provider.to_sym][:refresh_token]
+end
+

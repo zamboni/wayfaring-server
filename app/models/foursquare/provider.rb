@@ -14,8 +14,8 @@ class Foursquare::Provider < Provider
   end
   
   def get_venues lat, lng
-    @credentials = self.class.client_credentials
-    options = {ll: "#{lat},#{lng}"}.merge @credentials
+    credentials = self.class.client_credentials
+    options = {ll: "#{lat},#{lng}"}.merge credentials
     response = self.class.get('/venues/search' + Provider.merge_options_for_url(options))
     if response.response.code == '200'
       return response.parsed_response['response']['venues']

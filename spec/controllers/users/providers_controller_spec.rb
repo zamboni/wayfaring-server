@@ -1,6 +1,14 @@
 require 'spec_helper'
 
 describe Users::ProvidersController do
+  context 'oauth' do
+    context 'Google' do
+      before do
+        get :authorize, provider_type: 'google', refesh_token: mocked_refesh_token_for('google'), access_token: mocked_access_token_for('google'), expires_in: 3600
+      end
+
+    end      
+  end
   context 'destroying' do
     context 'Foursquare' do
       before do

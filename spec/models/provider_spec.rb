@@ -38,6 +38,7 @@ describe Provider do
         @user.providers.first.token.should == mocked_token_for('facebook')
       end
     end
+
     context 'Google' do
       before do
         @user = User.find_or_create_from_provider 'google', mocked_token_for('google')

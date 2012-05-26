@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   respond_to :json
-  
+
   def create
     user      = User.find_or_create_from_provider params[:provider][:type], params[:provider][:token]
     provider_class = Object::const_get(params[:provider][:type].classify)::const_get('Provider')
