@@ -8,12 +8,6 @@
   %body
     %header
       %ul.main-menu
-        - if @current_user
-          %li= link_to 'Dashboard', [:dashboard]
-          %li= link_to 'Logout', [:logout]
-        - else
-          %li= link_to 'Login', [:login]
-          %li= link_to 'Register', [:new, :user]
     - if flash.present?
       %section
         - flash.each do |alert_type, message|

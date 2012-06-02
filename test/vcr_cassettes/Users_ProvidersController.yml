@@ -163,3 +163,68 @@
       \                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            \n\n<script>bigPipe.onPageletArrive({\"phase\":1,\"id\":\"\",\"is_last\":true,\"the_end\":true,\"css\":[\"sYGYB\",\"JavZG\",\"ZaFvW\"],\"js\":[\"hrO7j\",\"O3NxG\",\"vfR\\/O\",\"nH1mS\"],\"tti_phase\":1})</script>
       \                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </body></html>"
     http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :post
+    uri: https://accounts.google.com:443/o/oauth2/token
+    body: code=kACAH-1Ng3OEr13RvC6Rrz_huYIDgr0oAa-HhoKMy_a0T9u2oTZywCR0oJ8y7Yd_LKz_I1-hfK3xsKm9fJBGFiynv1GXiuQ17Cqv511A8arOg5KXXmToyC5WLU&grant_type=authorization_code&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fusers%2Fproviders%2Fgoogle%2Foauth&client_id=810357465890.apps.googleusercontent.com&client_secret=--L1_mB53ldqyy0GIYbox0jC
+    headers: !!null 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 400
+      message: Bad Request
+    headers:
+      cache-control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      pragma:
+      - no-cache
+      expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      date:
+      - Wed, 30 May 2012 02:54:27 GMT
+      content-type:
+      - application/json
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+      server:
+      - GSE
+    body: ! "{\n  \"error\" : \"redirect_uri_mismatch\"\n}"
+    http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: https://www.googleapis.com:443/oauth2/v1/userinfo?access_token=
+    body: !!null 
+    headers: !!null 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 401
+      message: Unauthorized
+    headers:
+      www-authenticate:
+      - GoogleLogin realm="https://www.google.com/accounts/ClientLogin", service="lso"
+      content-type:
+      - application/json; charset=UTF-8
+      date:
+      - Wed, 30 May 2012 03:13:57 GMT
+      expires:
+      - Wed, 30 May 2012 03:13:57 GMT
+      cache-control:
+      - private, max-age=0
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+      server:
+      - GSE
+    body: ! "{\n \"error\": {\n  \"errors\": [\n   {\n    \"domain\": \"com.google.auth\",\n
+      \   \"reason\": \"invalidAuthentication\",\n    \"message\": \"invalid header\",\n
+      \   \"locationType\": \"header\",\n    \"location\": \"Authorization\"\n   }\n
+      \ ],\n  \"code\": 401,\n  \"message\": \"invalid header\"\n }\n}\n"
+    http_version: '1.1'

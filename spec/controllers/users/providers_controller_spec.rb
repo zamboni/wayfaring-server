@@ -1,10 +1,31 @@
 require 'spec_helper'
 
 describe Users::ProvidersController do
+  use_vcr_cassette
   context 'oauth' do
     context 'Google' do
       before do
-        get :authorize, provider_type: 'google', refesh_token: mocked_refesh_token_for('google'), access_token: mocked_access_token_for('google'), expires_in: 3600
+        get :authorize, provider_type: 'google', code: mocked_code_for('google')
+      end
+
+      it 'has a user' do
+        User.first.should be
+      end
+
+      it 'has a google provider' do
+        User.first.providers.first._type.should == Google::Provider
+      end
+
+      it 'has a access token' do
+        User.first.providers.first.access_token.should == mocked_token_for('google')
+      end
+
+      it 'has a refresh token' do
+        User.first.providers.first.refresh_token.should == mocked_refresh_token_for('google')
+      end
+
+      it 'has a expiration date' do
+        User.first.providers.first.expiration_date.should be
       end
 
     end      

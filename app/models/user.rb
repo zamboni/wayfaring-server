@@ -13,36 +13,26 @@ class User
   has_many :checkins
   embeds_many :providers
   
-  def find_or_create_provider provider_type, provider_token
-    provider_class = Object::const_get(provider_type.classify)::const_get('Provider')
-    uid            = provider_class.get_uid provider_token
+  # def find_or_create_provider provider_type, provider_token
+  #   provider_class = Object::const_get(provider_type.classify)::const_get('Provider')
+  #   uid            = provider_class.get_uid provider_token
 
-    provider = self.providers.where('_type' => provider_class.to_s).first
-    if provider
-      provider.update_attribute :token, provider_token
-    else
-      provider = provider_class.new(token: provider_token, uid: uid)
-      self.providers << provider
-    end
-    provider 
-  end
+  #   provider = self.providers.where('_type' => provider_class.to_s).first
+  #   if provider
+  #     provider.update_attribute :token, provider_token
+  #   else
+  #     provider = provider_class.new(token: provider_token, uid: uid)
+  #     self.providers << provider
+  #   end
+  #   provider 
+  # end
 
-  def self.find_or_create_from_provider provider_type, provider_token
+  def self.find_or_create_from_provider provider_type, uid
     provider_class = Object::const_get(provider_type.classify)::const_get('Provider')
-    uid            = provider_class.get_uid provider_token
     
     user = User.where('providers.uid' => uid, 'provider._type' => provider_class.to_s).first
-    if user
-      user.providers.where('_type' => provider_class.to_s).first.update_attribute :token, provider_token
-    else
-      user = User.create!(providers: 
-        [ 
-          provider_class.new(
-            token: provider_token, 
-            uid: uid
-          ) 
-        ]
-      )
+    unless user
+      user = User.create!(providers: [ provider_class.new(uid: uid) ])
     end
     user 
   end

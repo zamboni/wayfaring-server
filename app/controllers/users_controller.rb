@@ -10,4 +10,7 @@ class UsersController < ApplicationController
     end
     render json: {error: 'Could not create user'}
   end
+
+  def index
+  end
 end

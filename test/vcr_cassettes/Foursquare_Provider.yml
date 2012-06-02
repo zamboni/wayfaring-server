@@ -88,3 +88,161 @@
       & Services"],"primary":true}],"verified":false,"stats":{"checkinsCount":9,"usersCount":7,"tipCount":0}},"photos":{"count":0,"items":[]},"comments":{"count":0,"items":[]}}]},"friends":{"count":0,"groups":[{"type":"friends","name":"Mutual
       friends","count":0,"items":[]},{"type":"others","name":"Other friends","count":0,"items":[]}]},"following":{"count":0},"tips":{"count":0},"requests":{"count":0},"todos":{"count":0},"photos":{"count":0},"scores":{"recent":0,"max":5,"goal":50,"checkinsCount":0}}}}'
     http_version: '1.1'
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: https://foursquare.com:443/oauth2/authenticate?client_id=A0QQVDZNAGC2UVXCSRM4VUXFXV4CLS3ZF0KBGXLZMCNVU5UP&response_type=code&redirect_uri=localhost:3000/users
+    body: !!null 
+    headers: !!null 
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      cache-control:
+      - no-cache, private, no-store
+      content-type:
+      - text/html; charset=utf-8
+      date:
+      - Mon, 28 May 2012 06:17:08 GMT
+      expires:
+      - Mon, 28 May 2012 06:17:08 GMT
+      pragma:
+      - no-cache
+      server:
+      - nginx/1.1.17
+      set-cookie:
+      - XSESSIONID=w5~1bnbwr3yksbd11aohp44bml230;Path=/;Secure;HttpOnly
+      - bbhive=Y1THYWSIXGU004OZITO2DJYO3VRTO5;Path=/;Expires=Mon, 25-Jun-2012 06:17:08
+        GMT
+      - LOC="38.0%3A%3A-97.0%3A%3AUnited+States%3A%3AUS";Path=/;Secure
+      x-frame-options:
+      - DENY
+      content-length:
+      - '11359'
+      connection:
+      - Close
+    body: ! "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n\n<!DOCTYPE html PUBLIC \"-//W3C//DTD
+      XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\n<html
+      xmlns:fb=\"http://www.facebook.com/2008/fbml\" xmlns:og=\"http://opengraphprotocol.org/schema/\"
+      xmlns:lift=\"http://liftweb.net\" xmlns=\"http://www.w3.org/1999/xhtml\">\n<head>\n
+      \   <meta content=\"text/html; charset=UTF-8\" http-equiv=\"content-type\" />\n
+      \   <meta name=\"description\" content=\"foursquare\" />\n    <meta content=\"\"
+      name=\"keywords\" />\n    <meta content=\"foursquare\" name=\"application-name\"
+      />\n    \n  <meta content=\"Start the foursquare App\" name=\"msapplication-tooltip\"
+      />\n  <meta content=\"/\" name=\"msapplication-starturl\" />\n  <meta content=\"width=1024;height=768\"
+      name=\"msapplication-window\" />\n  <meta content=\"name=Recent Check-ins; action-uri=/;
+      icon-uri=/favicon.ico\" name=\"msapplication-task\" />\n  <meta content=\"name=Profile;action-uri=/user;icon-uri=/favicon.ico\"
+      name=\"msapplication-task\" />\n  <meta content=\"name=History;action-uri=/history;icon-uri=/favicon.ico\"
+      name=\"msapplication-task\" />\n  <meta content=\"name=Badges;action-uri=/badges;icon-uri=/favicon.ico\"
+      name=\"msapplication-task\" />\n  <meta content=\"name=Stats;action-uri=/stats;icon-uri=/favicon.ico\"
+      name=\"msapplication-task\" />\n\n\n    <title>\n    \n  foursquare</title>\n
+      \   <link href=\"https://ss1.4sqi.net/favicon-c62b82f6120e2c592a3e6f3476d66554.ico\"
+      type=\"image/x-icon\" rel=\"icon\" />\n    <link href=\"https://ss1.4sqi.net/favicon-c62b82f6120e2c592a3e6f3476d66554.ico\"
+      type=\"image/x-icon\" rel=\"shortcut icon\" />\n\n    <link href=\"https://ss0.4sqi.net/styles/foursquare-b4c3cfc481eec3c88a79c5e2b05d1998.css\"
+      type=\"text/css\" rel=\"stylesheet\" />\n    <link href=\"https://ss0.4sqi.net/facebox/facebox-8b560c6e620e476405f2f3fcd556975e.css\"
+      type=\"text/css\" rel=\"stylesheet\" />\n    <link href=\"https://ss0.4sqi.net/styles/leaflet-1105b8fbf1e470107ef602b81c9323b0.css\"
+      type=\"text/css\" rel=\"stylesheet\" />\n\n    \n  \n    <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js\"
+      type=\"text/javascript\" id=\"jquery\"></script>\n  \n  \n\n    \n  <script
+      src=\"https://ss0.4sqi.net/scripts/third_party/jquery.tmpl.min-2b26540d6761fa6eb1e66d97ec176364.js\"
+      type=\"text/javascript\"></script>\n\n\n\n    <script type=\"text/javascript\">\n
+      \     // TODO(msingleton): Fix leaflet to have a config block and not assume
+      url structure\n      var L_ROOT_URL = '/img/leaflet/'\n    </script>\n\n    <script
+      src=\"https://ss1.4sqi.net/scripts/build/en/chrome/root-5eeffd1743361321a319c44a7bfcb7b2.js\"
+      type=\"text/javascript\"></script>\n    <script src=\"https://ss1.4sqi.net/scripts/build/en/foursquare/root-b8eeabf36b659abe2be8a545e1160b7c.js\"
+      type=\"text/javascript\"></script>\n    \n    \n  \n\n    \n  \n\n\n    \n  \n\n\n
+      \   \n    \n  <script type=\"text/javascript\">\n    (function() {\n      window.fourSq
+      = window.fourSq || {};\n      window.fourSq.api = window.fourSq.api || {};\n
+      \     window.fourSq.fb = window.fourSq.fb || {};\n      window.fourSq.user =
+      window.fourSq.user || {};\n      window.fourSq.map = window.fourSq.map || {};\n
+      \     window.fourSq.debugLevel = function() { return fourSq.debug.Level.OFF;
+      };\n\n      /**\n       * Setup API domain and token\n       */\n      window.fourSq.api.config
+      = {\n        API_BASE: 'https://api.foursquare.com/',\n        API_TOKEN: 'QEJ4AQPTMMNB413HGNZ5YDMJSHTOHZHMLZCAQCCLXIX41OMP',\n
+      \       API_IFRAME: 'https://api.foursquare.com/xdreceiver.html',\n        CLIENT_VERSION:
+      '20120524',\n        IS_RED: false\n      };\n\n      /**\n       * Useful values
+      for current user.\n       */\n      window.fourSq.user.config = {\n        USER_PROFILE:
+      undefined,\n        USER_LAT: 38.0000000,\n        USER_LNG: -97.0000000,\n
+      \       LIST_COUNT: 0,\n        // Only used for display.\n        SU6: false,\n
+      \       LOCALE: 'en_US'\n      };\n\n      window.fourSq.fb.config = {\n        APP_ID:
+      86734274142,\n        SCOPE: 'publish_stream,publish_actions,user_checkins,friends_checkins,user_location,user_birthday'\n
+      \     };\n\n      window.fourSq.map.config = {\n        MAX_ZOOM_LEVEL: 17\n
+      \     };\n\n      document.domain = 'foursquare.com';\n    })();\n  </script>\n\n\n\n
+      \   <script type=\"text/javascript\">\n      $(function() {\n        $('a[rel*=facebox]').facebox();\n
+      \       $('#search input').placeholder();\n      })\n    </script>\n\n    <script
+      type=\"text/javascript\">\n      $(function() {\n        FSQ_setupSearchAutocomplete($('#search
+      input'));\n      })\n    </script>\n  \n\t\n<style> body {display: none;} </style>\n\n\t\n<script
+      type=\"text/javascript\">fourSq.i18n.langs = {\"en\":{\"name\":\"English\"},\"it\":{\"name\":\"Italiano\",\"host\":\"it\"},\"de\":{\"name\":\"Deutsch\",\"host\":\"de\"},\"es\":{\"name\":\"Español\",\"host\":\"es\"},\"fr\":{\"name\":\"Français\",\"host\":\"fr\"},\"ja\":{\"name\":\"日本語\",\"host\":\"ja\"},\"th\":{\"name\":\"ภาษาไทย\",\"host\":\"th\"},\"ko\":{\"name\":\"한국어\",\"host\":\"ko\"},\"ru\":{\"name\":\"Русский\",\"host\":\"ru\"},\"pt\":{\"name\":\"Português\",\"host\":\"pt\"},\"id\":{\"name\":\"Bahasa
+      Indonesia\",\"host\":\"id\"}};</script>\n\n\t\n</head>\n<body>\n    \n\n    \n\n
+      \   \n\n    <link href=\"https://ss0.4sqi.net/styles/header-ef47e5ebec4226dcc756da3345846f81.css\"
+      type=\"text/css\" rel=\"stylesheet\" />\n    \n<div id=\"header\">\n  \n\n  \n
+      \   <div class=\"wrap loggedOut translate\">\n      <a id=\"logo\" href=\"/\">foursquare</a>\n
+      \     <form id=\"search\" method=\"get\" action=\"/search\">\n        <input
+      id=\"headerBarSearch\" placeholder=\"Search people and places...\" name=\"q\"
+      type=\"text\" />\n        <button>Search</button>\n      </form>\n      <div
+      id=\"loginLink\"><a href=\"/login\">Log in</a></div>\n      <div id=\"menu\"><a
+      href=\"/signup\">Sign up</a></div>\n    </div>\n  \n</div>\n<div id=\"lift__noticesContainer__\"></div>\n\n\n\n
+      \   <div id=\"container\">\n       <div id=\"body\">\n        \n        <div
+      style=\"align:center\" id=\"content\">\n          \n    \n      \n  \n    \n
+      \ \n\n  \n\n  <script type=\"text/javascript\">\n    (function() {\n      if
+      (self == top) {\n        var theBody = document.getElementsByTagName('body')[0];\n
+      \       theBody.style.display = 'block';\n      } else {\n        top.location
+      = self.location;\n      }\n    })();\n  </script>\n\n\n  \n\n  <form action=\"/oauth2/authenticate\"
+      method=\"post\">\n\n    <div class=\"contentContainer translate\" id=\"oAuth\">\n\n
+      \     <div class=\"header\">\n        <p>Connect your <span class=\"notranslate\">foursquare</span>
+      account with:</p>\n      </div>\n      <div class=\"grayBox flatTop\">\n        <h2
+      class=\"notranslate\"><span>redirect_test</span></h2>\n        <h3 class=\"notranslate\"><span>localhost:3000</span></h3>\n
+      \       <hr />\n        <p><blockquote>Connected accounts can build cool things
+      on top of what you've done on <span class=\"notranslate\">foursquare</span>.
+      Approving this connection allows them access to do things like update your status,
+      view your check-in history and look at things like your friends list, tips,
+      and to-dos.</blockquote></p>\n        <hr />\n        <p id=\"oAuthTip\">Tip:
+      If you change your mind at any time, you can revoke access at <a class=\"notranslate\"
+      href=\"/settings\">foursquare.com/settings</a>.</p>\n        <div id=\"oAuthBar\">\n
+      \         \n          \n            <div id=\"oAuthLeft\"><a href=\"/login?continue=%2Foauth2%2Fauthenticate%3Fclient_id%3DA0QQVDZNAGC2UVXCSRM4VUXFXV4CLS3ZF0KBGXLZMCNVU5UP%26response_type%3Dcode%26redirect_uri%3Dlocalhost%3A3000%2Fusers&amp;F6727589311370B1B0J=_\"
+      class=\"newGreenButton\">Log in</a> to connect your <span class=\"notranslate\">foursquare</span>
+      account.</div>\n            <div id=\"oAuthRight\">No account? <a href=\"/signup/?source=oauth2&amp;F67275893113830L5MA=_\">Sign
+      up</a>.</div>\n          \n        </div>\n      </div>\n\n    </div>\n  </form>\n\n
+      \   \n  \n        </div>\n        <div style=\"clear: left\"></div>\n      </div>\n
+      \   </div>\n\n    \n    \n  \n    <div style=\"clear:both\" id=\"footer\">\n
+      \ <div class=\"links translate\">\n    <div class=\"outsideContainer\">\n      <ul>\n
+      \ <li><a href=\"https://foursquare.com/about\">about</a></li>\n  <li><a href=\"https://foursquare.com/apps\">apps</a></li>\n
+      \ <li><a href=\"http://blog.foursquare.com\">blog</a></li>\n  <li><a href=\"http://developers.foursquare.com\">developers</a></li>\n
+      \ <li><a href=\"http://foursquare.com/help\">help</a></li>\n  <li><a href=\"https://foursquare.com/jobs/\">jobs</a></li>\n
+      \ <li><a href=\"https://foursquare.com/legal/privacy\">privacy</a> (New)</li>\n
+      \ <li><a href=\"https://foursquare.com/legal/terms\">terms</a> (New)</li>\n
+      \ <li><a href=\"http://store.foursquare.com\">store</a></li>\n</ul>\n      <div
+      id=\"copyLang\">\n        © 2012 foursquare\n  \n  <span id=\"currentLanguage\"><a
+      href=\"#languagesContainer\" rel=\"facebox\">English</a></span><div id=\"languagesContainer\"
+      style=\"display:none;\">Do none of the words on this site make sense to you?
+      Select your favorite language below for greater clarity:<ul class=\"languages\"><li><span
+      class=\"link langSelect\" data-lang=\"en\">English</span></li><li><span class=\"link
+      langSelect\" data-lang=\"it\">Italiano</span></li><li><span class=\"link langSelect\"
+      data-lang=\"de\">Deutsch</span></li><li><span class=\"link langSelect\" data-lang=\"es\">Español</span></li><li><span
+      class=\"link langSelect\" data-lang=\"fr\">Français</span></li><li><span class=\"link
+      langSelect\" data-lang=\"ja\">日本語</span></li><li><span class=\"link langSelect\"
+      data-lang=\"th\">ภาษาไทย</span></li><li><span class=\"link langSelect\" data-lang=\"ko\">한국어</span></li><li><span
+      class=\"link langSelect\" data-lang=\"ru\">Русский</span></li><li><span class=\"link
+      langSelect\" data-lang=\"pt\">Português</span></li><li><span class=\"link langSelect\"
+      data-lang=\"id\">Bahasa Indonesia</span></li></ul></div>\n\n      </div>\n    </div>\n
+      \ </div>\n  \n\n</div>\n\n    \n\n  <script src=\"https://ssl.google-analytics.com/ga.js\"
+      type=\"text/javascript\"></script>\n\n\n\n<script type=\"text/javascript\">\n
+      \ try {\n    var pageTracker = _gat._getTracker('UA-2322480-5');\n    pageTracker._trackPageview();\n
+      \   pageTracker._trackPageLoadTime();\n    } catch(err) {\n    }\n</script>\n<script
+      type=\"text/javascript\">var _sf_startpt=(new Date()).getTime()</script>\n<script
+      type=\"text/javascript\">\nvar _sf_async_config = {uid: 11280};\nif (window.location.host
+      != 'developer.foursquare.com') {\n  _sf_async_config.domain = 'foursquare.com';\n}\nif
+      (window.chartbeat_path) {\n  _sf_async_config.path = chartbeat_path;\n}\n(function(){\n
+      \ function loadChartbeat() {\n    window._sf_endpt=(new Date()).getTime();\n
+      \   var e = document.createElement('script');\n    e.setAttribute('language',
+      'javascript');\n    e.setAttribute('type', 'text/javascript');\n    e.setAttribute('src',\n
+      \       (('https:' == document.location.protocol) ?\n            'https://a248.e.akamai.net/chartbeat.download.akamai.com/102508/'
+      :\n            'http://static.chartbeat.com/') +\n          'js/chartbeat.js');\n
+      \   document.body.appendChild(e);\n  }\n  var oldonload = window.onload;\n  window.onload
+      = (typeof window.onload != 'function') ?\n     loadChartbeat : function() {
+      oldonload(); loadChartbeat(); };\n})();\n\n</script>\n\n\n<div style=\"position:absolute;top:-1000px;left:-1000px;height:1px;width:1px;\">\n
+      \ <img src=\"/private/wtrack?ts=1338185828&amp;u=-1&amp;p=/oauth2/authenticate?client_id=A0QQVDZNAGC2UVXCSRM4VUXFXV4CLS3ZF0KBGXLZMCNVU5UP&amp;response_type=code&amp;redirect_uri=localhost:3000/users&amp;sig=ZnGpPWzT59aQSLkmv2s4CE66dM4%3D\"
+      />\n</div>\n\n\n\n\n  <script src=\"/ajax_request/liftAjax.js\" type=\"text/javascript\"></script>\n\n\t\n<script
+      type=\"text/javascript\">\n// <![CDATA[\njQuery(document).ready(function() {liftAjax.lift_successRegisterGC();});\nvar
+      lift_page = \"F672758931136GAGHOC\";\n// ]]>\n</script></body>\n</html>  \n
+      \ "
+    http_version: '1.1'

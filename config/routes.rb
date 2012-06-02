@@ -8,4 +8,6 @@ RebelFoundation::Application.routes.draw do
   resources :checkins
   resources :venues
   resources :providers
+
+  resources :pages
 end
