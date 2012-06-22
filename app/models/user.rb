@@ -27,8 +27,8 @@ class User
   #   provider 
   # end
 
-  def self.find_or_create_from_provider provider_type, uid
-    provider_class = Object::const_get(provider_type.classify)::const_get('Provider')
+  def self.find_or_create_from_provider provider_class, uid
+    # provider_class = Object::const_get(provider_type.classify)::const_get('Provider')
     
     user = User.where('providers.uid' => uid, 'provider._type' => provider_class.to_s).first
     unless user

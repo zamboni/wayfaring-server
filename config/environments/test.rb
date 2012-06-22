@@ -42,4 +42,5 @@ RebelFoundation::Application.configure do
   
   # Set localhost for mailer
   config.action_mailer.default_url_options = { :host => 'www.example.com' }
+
 end

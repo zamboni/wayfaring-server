@@ -7,14 +7,14 @@ class Google::Provider < Provider
   end
 
   def self.get_uid token_hash
-    options = {access_token: token_hash[:access_token]}
+    options = {access_token: token_hash['access_token']}
     response = self.get('https://www.googleapis.com/oauth2/v1/userinfo' + Provider.merge_options_for_url(options))
     response.parsed_response['id']    
   end
 
   def self.get_token_hash code
     credentials = self.client_credentials
-    options = {code: code, grant_type: 'authorization_code', redirect_uri: 'http://localhost:3000/users/providers/google/oauth'}.merge credentials
+    options = {code: code, grant_type: 'authorization_code', redirect_uri: 'http://127.0.0.1:3030/users/providers/google/authorize'}.merge credentials
     self.post('https://accounts.google.com/o/oauth2/token', body: options).parsed_response
   end
 

@@ -2,12 +2,11 @@ class Users::ProvidersController < ApplicationController
   respond_to :json
 
   def authorize
-    debugger
-    @provider_class = "#{params[:provider_type].classify}::Provider".constantize
-    token_hash      = @provider_class.get_token_hash params[:code]
-    uid             = @provider_class.get_uid token_hash
+    provider_class = "#{params[:provider_type].classify}::Provider".constantize
+    token_hash      = provider_class.get_token_hash params[:code]
+    uid             = provider_class.get_uid token_hash
 
-    user = User.find_or_create_from_provider provider_type, uid 
+    user = User.find_or_create_from_provider provider_class, uid 
 
     provider = user.providers.where('_type' => provider_class.to_s).first.update_attribute :token, provider_token
     provider.update_tokens token_hash
