@@ -1,11 +1,19 @@
 development:
-  host: localhost
-  database: rebel_foundation_development
+  sessions:
+    default:
+      database: rebel_foundation_development
+      hosts: 
+        - localhost:27017
 
 test:
-  host: localhost
-  database: rebel_foundation_test
+  sessions:
+    default:
+      hosts: 
+        - localhost:27017
+      database: rebel_foundation_test
 
 # set these environment variables on your prod server
 production:
-  uri: <%= ENV['MONGOHQ_URL'] %>
+  sessions:
+    default:
+      uri: <%= ENV['MONGOHQ_URL'] %>

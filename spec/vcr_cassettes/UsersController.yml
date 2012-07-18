@@ -1,0 +1,102 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.foursquare.com/v2/users/self?oauth_token=UJ4S0DJFXU00KFVFF1T4CX5FNFFD4JOSIVT52HGPM3YXC2OV
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      access-control-allow-origin:
+      - ! '*'
+      cache-control:
+      - no-cache, private, no-store
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Wed, 18 Jul 2012 03:32:40 GMT
+      expires:
+      - Wed, 18 Jul 2012 03:32:40 GMT
+      pragma:
+      - no-cache
+      server:
+      - nginx/1.2.1
+      x-ratelimit-limit:
+      - '500'
+      x-ratelimit-remaining:
+      - '499'
+      content-length:
+      - '4118'
+      connection:
+      - Close
+    body:
+      encoding: US-ASCII
+      string: ! '{"meta":{"code":200,"errorType":"deprecated","errorDetail":"Please
+        provide an API version to avoid future errors.See http:\/\/bit.ly\/vywCav"},"notifications":[{"type":"notificationTray","item":{"unreadCount":0}}],"response":{"user":{"id":"20566366","firstName":"RebelHold","lastName":"Test","relationship":"self","photo":"https:\/\/is1.4sqi.net\/userpix_thumbs\/Q0VE5U4RDXS52EU1.png","friends":{"count":0,"groups":[{"type":"friends","name":"Mutual
+        friends","count":0,"items":[]},{"type":"others","name":"Other friends","count":0,"items":[]}]},"type":"user","tips":{"count":0},"lists":{"groups":[{"type":"created","count":1,"items":[]}]},"gender":"male","homeCity":"Phoenix","bio":"","contact":{"email":"test@rebelhold.com"},"pings":false,"badges":{"count":1,"items":[{"id":"4f39f72fe4b0039c24e88c6c","badgeId":"4c4f08667a0803bbaa202ab7","name":"Newbie","unlockMessage":"You
+        unlocked the Newbie badge!","description":"Your first check-in! You earn badges
+        for your adventures, like staying out late or trying 5 different pizza joints.
+        And with every check-in, we learn more about your tastes and can recommend
+        new places. Head over to the Explore tab to see our suggestions!","badgeText":"Your
+        first check-in! You earn badges for your adventures, like staying out late
+        or trying 5 different pizza joints. And with every check-in, we learn more
+        about your tastes and can recommend new places. Head over to the Explore tab
+        to see our suggestions!","image":{"prefix":"https:\/\/playfoursquare.s3.amazonaws.com\/badge\/","sizes":[57,114,200,300,400],"name":"\/newbie.png"},"unlocks":[{"checkins":[{"id":"4f39f72fe4b0039c24e88c69","createdAt":1329198895,"type":"checkin","timeZone":"America\/Phoenix","timeZoneOffset":-420,"venue":{"id":"4c82776dd8086dcbdea67652","name":"Sunbelt
+        Rentals","contact":{},"location":{"address":"2066 E. University Dr","lat":33.42240370188443,"lng":-111.92254752985338,"city":"Tempe","state":"Az","country":"United
+        States","cc":"US"},"categories":[{"id":"4bf58dd8d48988d112951735","name":"Hardware
+        Store","pluralName":"Hardware Stores","shortName":"Hardware","icon":"https:\/\/foursquare.com\/img\/categories\/shops\/hardware.png","parents":["Shops
+        & Services"],"primary":true}],"verified":false,"stats":{"checkinsCount":11,"usersCount":9,"tipCount":0},"likes":{"count":0,"groups":[]},"beenHere":{"count":0}},"likes":{"count":0,"groups":[]},"photos":{"count":0,"items":[]},"comments":{"count":0,"items":[]}}]}]}]},"mayorships":{"count":0,"items":[]},"checkins":{"count":7,"items":[{"id":"4fc909cee4b090ae8f84edf5","createdAt":1338575310,"type":"checkin","timeZone":"America\/New_York","timeZoneOffset":-240,"venue":{"id":"3fd66200f964a52060e71ee3","name":"Bar
+        29","contact":{"phone":"2127790306","formattedPhone":"(212) 779-0306"},"location":{"address":"405
+        Third Avenue","crossStreet":"btw 28th and 29th St","lat":40.742407,"lng":-73.980599,"postalCode":"10016","city":"New
+        York","state":"NY","country":"United States","cc":"US"},"categories":[{"id":"4bf58dd8d48988d116941735","name":"Bar","pluralName":"Bars","shortName":"Bar","icon":"https:\/\/foursquare.com\/img\/categories\/nightlife\/bar.png","parents":["Nightlife
+        Spots"],"primary":true}],"verified":true,"stats":{"checkinsCount":2344,"usersCount":1502,"tipCount":24},"likes":{"count":0,"groups":[]},"like":false,"friendVisits":{"count":0,"summary":"You''ve
+        been here","items":[{"visitedCount":2,"liked":false,"user":{"id":"20566366","firstName":"RebelHold","lastName":"Test","relationship":"self","photo":"https:\/\/is1.4sqi.net\/userpix_thumbs\/Q0VE5U4RDXS52EU1.png","tips":{"count":0},"lists":{"groups":[{"type":"created","count":1,"items":[]}]},"gender":"male","homeCity":"Phoenix","bio":"","contact":{"email":"test@rebelhold.com"}}}]},"beenHere":{"count":2,"marked":true},"listed":{"groups":[{"type":"dones","count":1,"items":[]}]}},"likes":{"count":0,"groups":[]},"like":false,"photos":{"count":0,"items":[]},"comments":{"count":0,"items":[]}}]},"following":{"count":0},"requests":{"count":0},"todos":{"count":0},"photos":{"count":0,"items":[]},"scores":{"recent":0,"max":41,"goal":50,"checkinsCount":0},"referralId":"u-20566366"}}}'
+    http_version: '1.1'
+  recorded_at: Wed, 18 Jul 2012 03:32:40 GMT
+- request:
+    method: get
+    uri: https://graph.facebook.com/me?access_token=BAAErTBz7PZB0BAMLiGa1zq1CYA9sflZCkZA66L0TVdpH2p73xWK3VqvYrRIkzR23n6PmvI4cyqZBMvTMpYY0iARqOVowEz0tiZBcVRE0QoSrPG4wYAY9fj40dvIluyL4xng9DjJ3RqgZDZD
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      access-control-allow-origin:
+      - ! '*'
+      cache-control:
+      - private, no-cache, no-store, must-revalidate
+      content-type:
+      - text/javascript; charset=UTF-8
+      etag:
+      - ! '"e5b0e90d81ef2b05a36a28cee29f706714b1c599"'
+      expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      last-modified:
+      - '2012-06-16T17:46:24+0000'
+      pragma:
+      - no-cache
+      x-fb-rev:
+      - '592913'
+      x-fb-debug:
+      - wZ7CJjQTx2VBl9kVSuHeJcRVkqfLM+Bc+RRUdH0Ew8Q=
+      date:
+      - Wed, 18 Jul 2012 03:32:43 GMT
+      connection:
+      - close
+      content-length:
+      - '338'
+    body:
+      encoding: US-ASCII
+      string: ! '{"id":"100002952898027","name":"RebelHold TestAccount","first_name":"RebelHold","last_name":"TestAccount","link":"http:\/\/www.facebook.com\/rebelhold.testaccount","username":"rebelhold.testaccount","gender":"male","email":"test\u0040rebelhold.com","timezone":-7,"locale":"en_US","verified":true,"updated_time":"2012-06-16T17:46:24+0000"}'
+    http_version: '1.1'
+  recorded_at: Wed, 18 Jul 2012 03:32:43 GMT
+recorded_with: VCR 2.2.3

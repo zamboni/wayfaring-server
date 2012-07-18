@@ -1,0 +1,85 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://graph.facebook.com/search?center=40.7,-74&distance=1000&type=place&access_token=BAAErTBz7PZB0BAMLiGa1zq1CYA9sflZCkZA66L0TVdpH2p73xWK3VqvYrRIkzR23n6PmvI4cyqZBMvTMpYY0iARqOVowEz0tiZBcVRE0QoSrPG4wYAY9fj40dvIluyL4xng9DjJ3RqgZDZD
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      access-control-allow-origin:
+      - ! '*'
+      cache-control:
+      - private, no-cache, no-store, must-revalidate
+      content-type:
+      - text/javascript; charset=UTF-8
+      etag:
+      - ! '"d044e0017e2072a749bc0ea42bf5854627bbfc75"'
+      expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      pragma:
+      - no-cache
+      x-fb-rev:
+      - '592913'
+      x-fb-debug:
+      - qd2JjhHFz7yIdaMmr+uYApE934XuTDvTlCPCa/GDyK8=
+      date:
+      - Wed, 18 Jul 2012 03:32:54 GMT
+      connection:
+      - close
+      content-length:
+      - '5256'
+    body:
+      encoding: US-ASCII
+      string: ! '{"data":[{"name":"Brooklyn Bridge","category":"Interest","location":{"city":"Brooklyn","state":"NY","country":"United
+        States","zip":"10005","latitude":40.707229324027,"longitude":-73.99889515333},"id":"111871368829109"},{"name":"South
+        Street Seaport","category":"Attractions\/things to do","location":{"street":"19
+        Fulton Street, suite 201","city":"New York","state":"NY","country":"United
+        States","zip":"10038","latitude":40.705709576519,"longitude":-74.002801568236},"id":"20796366834"},{"name":"Grimaldi''s
+        Pizza","category":"Local business","location":{"street":"19 Old Fulton Street","city":"Brooklyn","state":"NY","country":"United
+        States","zip":"11201","latitude":40.702618465523,"longitude":-73.993703713921},"id":"143993815634140"},{"name":"UNICEF
+        USA","category":"Non-profit organization","location":{"street":"125 Maiden
+        Lane","city":"New York","state":"NY","country":"United States","zip":"10038","latitude":40.70642,"longitude":-74.00641},"id":"81517275796"},{"name":"Beekman
+        Beer Garden Beach Club","category":"Bar","location":{"street":"89 South Street,
+        north side of Pier 17 near Beekman Street","city":"New York","state":"NY","country":"United
+        States","zip":"10038","latitude":40.705631707409,"longitude":-74.001000408075},"id":"229432990407360"},{"name":"American
+        Foundation for Suicide Prevention","category":"Non-profit organization","location":{"street":"120
+        Wall St","city":"New York","state":"NY","country":"United States","zip":"10005","latitude":40.7043495,"longitude":-74.0062637},"id":"27817332304"},{"name":"Pier
+        17","category":"Local business","location":{"city":"New York","state":"NY","country":"United
+        States","zip":"80215","latitude":40.705442996928,"longitude":-74.001946115685},"id":"126499217399502"},{"name":"amfAR
+        The Foundation for AIDS Research","category":"Non-profit organization","location":{"street":"120
+        Wall Street, 13th Floor","city":"New York","state":"NY","country":"United
+        States","zip":"10005","latitude":40.70478,"longitude":-74.00677},"id":"26830483675"},{"name":"South
+        Street Sea Port, New York City","category":"Local business","location":{"city":"New
+        York","state":"NY","country":"United States","zip":"10038","latitude":40.705800375464,"longitude":-74.002758516438},"id":"138499749526874"},{"name":"MGID","category":"Website","location":{"street":"77
+        Water Street, Suite 834","city":"New York","state":"NY","country":"United
+        States","zip":"10005","latitude":40.7044487,"longitude":-74.0084305},"id":"152193621459152"},{"name":"DUMBO,
+        Brooklyn","category":"Local business","location":{"city":"Brooklyn","state":"NY","country":"United
+        States","zip":"11201","latitude":40.702925294064,"longitude":-73.989977240043},"id":"124869040893891"},{"name":"Out
+        of the Darkness Overnight Walk","category":"Non-profit organization","location":{"street":"120
+        Wall Street, 29nd FL","city":"New York","state":"NY","country":"United States","zip":"10005","latitude":40.70478,"longitude":-74.00677},"id":"145256545538249"},{"name":"BODIES...The
+        Exhibition","category":"Local business","location":{"street":"11 Fulton St.","city":"New
+        York","state":"NY","country":"United States","zip":"10036","latitude":40.706740042004,"longitude":-74.00339976883},"id":"86911678953"},{"name":"Sexy
+        Eatz","category":"Local business","location":{"street":"SexyEatz LLC, The
+        Trump Building, 40 Wall Street, 28th Floor","city":"New York","state":"NY","country":"United
+        States","zip":"10005","latitude":40.70586,"longitude":-74.00713},"id":"219377244795510"},{"name":"New
+        York Photo Festival","category":"Organization","location":{"street":"37 Main
+        Street","city":"Brooklyn","state":"NY","country":"United States","zip":"11201","latitude":40.70305,"longitude":-73.99069},"id":"333711303340202"},{"name":"Social
+        Fans Expert","category":"Website","location":{"street":"44 E 161st St","city":"Brooklyn","state":"NY","country":"United
+        States","zip":"10452","latitude":40.6919708,"longitude":-73.9980316},"id":"125537380882060"},{"name":"Manhattan,
+        New York","category":"Real estate","location":{"street":"30 Wall Street, 11th
+        Floor","city":"Manhattan","state":"NY","country":"United States","zip":"10001","latitude":40.70588,"longitude":-74.00718},"id":"48328740837"},{"name":"Classical
+        Cocktails","category":"Food\/beverages","location":{"street":"63 Wall Street,
+        Suite 2308 ","city":"New York","state":"NY","country":"United States","zip":"10005","latitude":40.70574,"longitude":-74.0083},"id":"175945385840948"},{"name":"ACQUA
+        AT PECK SLIP, Restaurant & Bar","category":"Restaurant\/cafe","location":{"street":"21
+        Peck Slip at Water Street","city":"New York","state":"NY","country":"United
+        States","zip":"10038","latitude":40.708372694682,"longitude":-74.001911370271},"id":"8900779141"},{"name":"Dellarocco''s","category":"Restaurant\/cafe","location":{"street":"214
+        Hicks Street","city":"Brooklyn Heights","state":"NY","country":"United States","zip":"11201","latitude":40.695052,"longitude":-73.996126},"id":"125083840967069"}],"paging":{"next":"https:\/\/graph.facebook.com\/search?type=place&value=1&center=40.7,-74&distance=1000&access_token=BAAErTBz7PZB0BAMLiGa1zq1CYA9sflZCkZA66L0TVdpH2p73xWK3VqvYrRIkzR23n6PmvI4cyqZBMvTMpYY0iARqOVowEz0tiZBcVRE0QoSrPG4wYAY9fj40dvIluyL4xng9DjJ3RqgZDZD&limit=25&offset=25&__after_id=125083840967069"}}'
+    http_version: '1.1'
+  recorded_at: Wed, 18 Jul 2012 03:32:54 GMT
+recorded_with: VCR 2.2.3
