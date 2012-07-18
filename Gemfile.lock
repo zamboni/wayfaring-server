@@ -1,3 +1,9 @@
+PATH
+  remote: ~/Projects/oautherizer
+  specs:
+    oautherizer (0.0.1)
+      capybara
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -332,6 +338,7 @@ DEPENDENCIES
   mongoid
   mongoid-paperclip
   mongoid-rspec
+  oautherizer!
   omniauth
   omniauth-facebook
   omniauth-google-oauth2

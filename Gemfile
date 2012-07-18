@@ -61,7 +61,7 @@ group :test, :development do
   gem 'email_spec'
   gem 'pry'
   gem 'pry-nav'
-
+  gem 'oautherizer', path: '~/Projects/oautherizer'
   # Pretty printed test output
   gem 'turn', require: false
 
