@@ -82,4 +82,40 @@ http_interactions:
         Hicks Street","city":"Brooklyn Heights","state":"NY","country":"United States","zip":"11201","latitude":40.695052,"longitude":-73.996126},"id":"125083840967069"}],"paging":{"next":"https:\/\/graph.facebook.com\/search?type=place&value=1&center=40.7,-74&distance=1000&access_token=BAAErTBz7PZB0BAMLiGa1zq1CYA9sflZCkZA66L0TVdpH2p73xWK3VqvYrRIkzR23n6PmvI4cyqZBMvTMpYY0iARqOVowEz0tiZBcVRE0QoSrPG4wYAY9fj40dvIluyL4xng9DjJ3RqgZDZD&limit=25&offset=25&__after_id=125083840967069"}}'
     http_version: '1.1'
   recorded_at: Wed, 18 Jul 2012 03:32:44 GMT
+- request:
+    method: get
+    uri: https://api.foursquare.com/v2/venues/search?ll=40.7,-74&client_id=YUORTWIN2CBQWOQWLRZLKU0CLL5KHJC2OO0TDXJZCRELNXIL&client_secret=XVKHJQE5KIUUVX24FFLPQAMZWWT2UA2AAFYAR0X40JP2UIBV&v=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      access-control-allow-origin:
+      - ! '*'
+      cache-control:
+      - no-cache, private, no-store
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Mon, 23 Jul 2012 08:26:00 GMT
+      expires:
+      - Mon, 23 Jul 2012 08:26:00 GMT
+      pragma:
+      - no-cache
+      server:
+      - nginx/1.2.1
+      content-length:
+      - '101'
+      connection:
+      - Close
+    body:
+      encoding: US-ASCII
+      string: ! '{"meta":{"code":400,"errorType":"param_error","errorDetail":"Value  is
+        invalid for v"},"response":{}}'
+    http_version: '1.1'
+  recorded_at: Mon, 23 Jul 2012 08:26:00 GMT
 recorded_with: VCR 2.2.3

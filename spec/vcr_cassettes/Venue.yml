@@ -82,4 +82,220 @@ http_interactions:
         Hicks Street","city":"Brooklyn Heights","state":"NY","country":"United States","zip":"11201","latitude":40.695052,"longitude":-73.996126},"id":"125083840967069"}],"paging":{"next":"https:\/\/graph.facebook.com\/search?type=place&value=1&center=40.7,-74&distance=1000&access_token=BAAErTBz7PZB0BAMLiGa1zq1CYA9sflZCkZA66L0TVdpH2p73xWK3VqvYrRIkzR23n6PmvI4cyqZBMvTMpYY0iARqOVowEz0tiZBcVRE0QoSrPG4wYAY9fj40dvIluyL4xng9DjJ3RqgZDZD&limit=25&offset=25&__after_id=125083840967069"}}'
     http_version: '1.1'
   recorded_at: Wed, 18 Jul 2012 03:32:54 GMT
-recorded_with: VCR 2.2.3
+- request:
+    method: get
+    uri: https://api.foursquare.com/v2/venues/search?ll=40.7,-74&client_id=YUORTWIN2CBQWOQWLRZLKU0CLL5KHJC2OO0TDXJZCRELNXIL&client_secret=XVKHJQE5KIUUVX24FFLPQAMZWWT2UA2AAFYAR0X40JP2UIBV&v=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      access-control-allow-origin:
+      - ! '*'
+      cache-control:
+      - no-cache, private, no-store
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Tue, 24 Jul 2012 06:15:47 GMT
+      expires:
+      - Tue, 24 Jul 2012 06:15:47 GMT
+      pragma:
+      - no-cache
+      server:
+      - nginx/1.2.1
+      content-length:
+      - '101'
+      connection:
+      - Close
+    body:
+      encoding: US-ASCII
+      string: ! '{"meta":{"code":400,"errorType":"param_error","errorDetail":"Value  is
+        invalid for v"},"response":{}}'
+    http_version: '1.1'
+  recorded_at: Tue, 24 Jul 2012 06:15:47 GMT
+- request:
+    method: get
+    uri: https://api.foursquare.com/v2/venues/search?ll=40.7,-74&client_id=YUORTWIN2CBQWOQWLRZLKU0CLL5KHJC2OO0TDXJZCRELNXIL&client_secret=XVKHJQE5KIUUVX24FFLPQAMZWWT2UA2AAFYAR0X40JP2UIBV&v=20120723
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      access-control-allow-origin:
+      - ! '*'
+      cache-control:
+      - no-cache, private, no-store
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Fri, 27 Jul 2012 00:16:51 GMT
+      expires:
+      - Fri, 27 Jul 2012 00:16:51 GMT
+      pragma:
+      - no-cache
+      server:
+      - nginx/1.2.1
+      strict-transport-security:
+      - max-age=864000
+      x-ratelimit-limit:
+      - '1000'
+      x-ratelimit-remaining:
+      - '1000'
+      content-length:
+      - '21550'
+      connection:
+      - Close
+    body:
+      encoding: US-ASCII
+      string: ! '{"meta":{"code":200},"response":{"venues":[{"id":"42377700f964a52024201fe3","name":"Brooklyn
+        Heights Promenade","contact":{},"location":{"address":"Columbia Heights","crossStreet":"btwn
+        Remsen & Orange","lat":40.69829137715981,"lng":-73.99663209915161,"distance":342,"postalCode":"11201","city":"Brooklyn","state":"NY","country":"United
+        States","cc":"US"},"categories":[{"id":"4bf58dd8d48988d163941735","name":"Park","pluralName":"Parks","shortName":"Park","icon":{"prefix":"https:\/\/foursquare.com\/img\/categories_v2\/parks_outdoors\/park_","suffix":".png"},"primary":true}],"verified":false,"stats":{"checkinsCount":10564,"usersCount":4980,"tipCount":64},"likes":{"count":0,"groups":[]},"specials":{"count":0,"items":[]},"hereNow":{"count":0,"groups":[]},"referralId":"v-1343348211"},{"id":"430d0a00f964a5203e271fe3","name":"Brooklyn
+        Bridge Park","contact":{"phone":"2128033822","formattedPhone":"(212) 803-3822","twitter":"bbpconservancy"},"location":{"address":"Main
+        St.","crossStreet":"Plymouth St.","lat":40.701593743002,"lng":-73.99592399597168,"distance":387,"postalCode":"11201","city":"Brooklyn","state":"NY","country":"United
+        States","cc":"US"},"categories":[{"id":"4bf58dd8d48988d163941735","name":"Park","pluralName":"Parks","shortName":"Park","icon":{"prefix":"https:\/\/foursquare.com\/img\/categories_v2\/parks_outdoors\/park_","suffix":".png"},"primary":true}],"verified":true,"stats":{"checkinsCount":11913,"usersCount":7526,"tipCount":76},"likes":{"count":0,"groups":[]},"specials":{"count":0,"items":[]},"hereNow":{"count":16,"groups":[{"type":"others","name":"Other
+        people here","count":16,"items":[]}]},"referralId":"v-1343348211"},{"id":"4fe38c7be4b02bc5529cefdd","name":"Photoville","contact":{},"location":{"address":"Brooklyn
+        Bridge Park","crossStreet":"Pier 3","lat":40.69778830315359,"lng":-73.99791552594898,"distance":302,"postalCode":"11201","city":"Brooklyn","state":"NY","country":"United
+        States","cc":"US"},"categories":[{"id":"4bf58dd8d48988d1e2931735","name":"Art
+        Gallery","pluralName":"Art Galleries","shortName":"Art Gallery","icon":{"prefix":"https:\/\/foursquare.com\/img\/categories_v2\/arts_entertainment\/artgallery_","suffix":".png"},"primary":true}],"verified":false,"stats":{"checkinsCount":475,"usersCount":442,"tipCount":8},"likes":{"count":0,"groups":[]},"specials":{"count":0,"items":[]},"hereNow":{"count":0,"groups":[]},"referralId":"v-1343348211"},{"id":"4e2192468130e92fc6a44f09","name":"Brooklyn
+        Hip Hop Festival","contact":{"twitter":"bkhiphopfest"},"location":{"address":"26
+        New Dock St.","crossStreet":"Water Street","lat":40.697459526448704,"lng":-73.9980991642575,"distance":325,"city":"Brooklyn","state":"NY","country":"United
+        States","cc":"US"},"categories":[{"id":"4bf58dd8d48988d1e5931735","name":"Music
+        Venue","pluralName":"Music Venues","shortName":"Music Venue","icon":{"prefix":"https:\/\/foursquare.com\/img\/categories_v2\/arts_entertainment\/musicvenue_","suffix":".png"},"primary":true}],"verified":false,"stats":{"checkinsCount":311,"usersCount":289,"tipCount":1},"likes":{"count":0,"groups":[]},"specials":{"count":0,"items":[]},"hereNow":{"count":0,"groups":[]},"referralId":"v-1343348211"},{"id":"4ff6de22e4b02ca33c0a04fb","name":"Brooklyn
+        Bridge Park Pop Up Pool","contact":{},"location":{"lat":40.6999710773688,"lng":-73.99664153033778,"distance":283,"postalCode":"11201","city":"Brooklyn","state":"NY","country":"United
+        States","cc":"US"},"categories":[{"id":"4bf58dd8d48988d15e941735","name":"Pool","pluralName":"Pools","shortName":"Pool","icon":{"prefix":"https:\/\/foursquare.com\/img\/categories_v2\/parks_outdoors\/pool_","suffix":".png"},"primary":true}],"verified":false,"stats":{"checkinsCount":91,"usersCount":76,"tipCount":3},"likes":{"count":0,"groups":[]},"specials":{"count":0,"items":[]},"hereNow":{"count":1,"groups":[{"type":"others","name":"Other
+        people here","count":1,"items":[]}]},"referralId":"v-1343348211"},{"id":"4ff75105d86ca0c938e35829","name":"Oscar
+        Tuazon: People","contact":{"phone":"2122237800","formattedPhone":"(212) 223-7800","twitter":"PublicArtFund"},"location":{"address":"Brooklyn
+        Bridge Park Pier 1","lat":40.700959311037984,"lng":-73.99800539016724,"distance":199,"postalCode":"10004","city":"Brooklyn","state":"NY","country":"United
+        States","cc":"US"},"categories":[{"id":"4bf58dd8d48988d1e2931735","name":"Art
+        Gallery","pluralName":"Art Galleries","shortName":"Art Gallery","icon":{"prefix":"https:\/\/foursquare.com\/img\/categories_v2\/arts_entertainment\/artgallery_","suffix":".png"},"primary":true}],"verified":true,"stats":{"checkinsCount":7,"usersCount":7,"tipCount":1},"likes":{"count":0,"groups":[]},"specials":{"count":1,"items":[{"id":"4ffc639ad86c2798a0e1f4de","type":"mayor","message":"Mayor
+        gets a VIP pass to Tatzu Nishi''s \"Discovering Columbus\" - our exhibition
+        open in Columbus Circle September 20 \u2013 November 18, 2012.","imageUrls":{"count":0},"description":"Unlocked
+        for the mayor","finePrint":"Email Nora, ngomez@publicartfund.org to score
+        your swag.","icon":"mayor","title":"Mayor Special","provider":"foursquare","redemption":"standard","likes":{"count":0,"groups":[]}}]},"hereNow":{"count":0,"groups":[]},"referralId":"v-1343348211"},{"id":"4e15d1348877cd5712112a44","name":"The
+        Arena","contact":{},"location":{"address":"110 Wall Street","lat":40.70148822526266,"lng":-74.00108900070211,"distance":189,"city":"New
+        York","state":"New York","country":"United States","cc":"US"},"categories":[{"id":"4bf58dd8d48988d1e4941735","name":"Campground","pluralName":"Campgrounds","shortName":"Campground","icon":{"prefix":"https:\/\/foursquare.com\/img\/categories_v2\/parks_outdoors\/campground_","suffix":".png"},"primary":true}],"verified":false,"stats":{"checkinsCount":64,"usersCount":20,"tipCount":1},"likes":{"count":0,"groups":[]},"specials":{"count":0,"items":[]},"hereNow":{"count":0,"groups":[]},"referralId":"v-1343348211"},{"id":"4fd91ce8e4b0a8dbd1eddc69","name":"SS
+        Gawker","contact":{},"location":{"lat":40.69900610889219,"lng":-74.00171450760502,"distance":182,"country":"United
+        States","cc":"US"},"categories":[{"id":"4bf58dd8d48988d12d951735","name":"Boat
+        or Ferry","pluralName":"Boats or Ferries","shortName":"Boat \/ Ferry","icon":{"prefix":"https:\/\/foursquare.com\/img\/categories_v2\/travel\/ferry_","suffix":".png"},"primary":true}],"verified":false,"stats":{"checkinsCount":8,"usersCount":6,"tipCount":1},"likes":{"count":0,"groups":[]},"specials":{"count":0,"items":[]},"hereNow":{"count":0,"groups":[]},"referralId":"v-1343348211"},{"id":"4f8a62ebe4b09582a33c2cbd","name":"8
+        Clark Street","contact":{},"location":{"address":"8 Clark St, Brooklyn, NY
+        11201","lat":40.69815602774352,"lng":-73.99598157432625,"distance":396,"postalCode":"11201","city":"Brooklyn","state":"New
+        York","country":"United States","cc":"US"},"categories":[{"id":"4d954b06a243a5684965b473","name":"Residential
+        Building (Apartment\/Condo)","pluralName":"Residential Buildings (Apartments\/Condos)","shortName":"Apartment
+        Building","icon":{"prefix":"https:\/\/foursquare.com\/img\/categories_v2\/building\/apartment_","suffix":".png"},"primary":true}],"verified":false,"stats":{"checkinsCount":134,"usersCount":12,"tipCount":0},"likes":{"count":0,"groups":[]},"specials":{"count":0,"items":[]},"hereNow":{"count":0,"groups":[]},"referralId":"v-1343348211"},{"id":"4ebac60a0cd6904066e4108f","name":"Brookyn
+        Bridge Park Greenway","contact":{},"location":{"address":"Fulton Ferry Landing
+        to Atlantic Ave.","lat":40.70025980212479,"lng":-73.99698615074158,"distance":255,"postalCode":"11201","city":"Brooklyn","state":"NY","country":"United
+        States","cc":"US"},"categories":[{"id":"4bf58dd8d48988d163941735","name":"Park","pluralName":"Parks","shortName":"Park","icon":{"prefix":"https:\/\/foursquare.com\/img\/categories_v2\/parks_outdoors\/park_","suffix":".png"},"primary":true}],"verified":false,"stats":{"checkinsCount":156,"usersCount":92,"tipCount":0},"likes":{"count":0,"groups":[]},"specials":{"count":0,"items":[]},"hereNow":{"count":0,"groups":[]},"referralId":"v-1343348211"},{"id":"4c3a5ad83849c92880e0c2b1","name":"Blue
+        Marble Ice Cream","contact":{},"location":{"address":"Brooklyn Bridge Park
+        - Pier 1","lat":40.70136599888968,"lng":-73.99794101715088,"distance":230,"postalCode":"11201","city":"Brooklyn","state":"NY","country":"United
+        States","cc":"US"},"categories":[{"id":"4bf58dd8d48988d1c9941735","name":"Ice
+        Cream Shop","pluralName":"Ice Cream Shops","shortName":"Ice Cream","icon":{"prefix":"https:\/\/foursquare.com\/img\/categories_v2\/food\/icecream_","suffix":".png"},"primary":true}],"verified":false,"stats":{"checkinsCount":84,"usersCount":74,"tipCount":11},"likes":{"count":0,"groups":[]},"specials":{"count":0,"items":[]},"hereNow":{"count":0,"groups":[]},"referralId":"v-1343348211"},{"id":"4fd9ede2e4b0f6aceea6029b","name":"Blue
+        chair","contact":{},"location":{"lat":40.70171156542048,"lng":-74.00130706756083,"distance":220,"country":"United
+        States","cc":"US"},"categories":[{"id":"4bf58dd8d48988d1f1931735","name":"General
+        Entertainment","pluralName":"General Entertainment","shortName":"Other - Entertainment","icon":{"prefix":"https:\/\/foursquare.com\/img\/categories_v2\/arts_entertainment\/default_","suffix":".png"},"primary":true}],"verified":false,"stats":{"checkinsCount":5,"usersCount":1,"tipCount":0},"likes":{"count":0,"groups":[]},"specials":{"count":0,"items":[]},"hereNow":{"count":0,"groups":[]},"referralId":"v-1343348211"},{"id":"4dcc605afa76e2535b237f50","name":"Celebrate
+        Brooklyn","contact":{},"location":{"address":"Pier 1","lat":40.70181927468727,"lng":-73.99731296151289,"distance":304,"city":"Brooklyn","state":"NY","country":"United
+        States","cc":"US"},"categories":[{"id":"4bf58dd8d48988d1e5931735","name":"Music
+        Venue","pluralName":"Music Venues","shortName":"Music Venue","icon":{"prefix":"https:\/\/foursquare.com\/img\/categories_v2\/arts_entertainment\/musicvenue_","suffix":".png"},"primary":true}],"verified":false,"stats":{"checkinsCount":87,"usersCount":76,"tipCount":0},"likes":{"count":0,"groups":[]},"specials":{"count":0,"items":[]},"hereNow":{"count":0,"groups":[]},"referralId":"v-1343348211"},{"id":"4ff764c3e4b01ead023da588","name":"Brooklyn
+        Beach Shack","contact":{},"location":{"lat":40.700051,"lng":-73.996479,"distance":297,"postalCode":"11201","city":"Brooklyn","state":"NY","country":"United
+        States","cc":"US"},"categories":[{"id":"4bf58dd8d48988d16c941735","name":"Burger
+        Joint","pluralName":"Burger Joints","shortName":"Burgers","icon":{"prefix":"https:\/\/foursquare.com\/img\/categories_v2\/food\/burger_","suffix":".png"},"primary":true}],"verified":false,"stats":{"checkinsCount":23,"usersCount":8,"tipCount":3},"likes":{"count":0,"groups":[]},"specials":{"count":0,"items":[]},"hereNow":{"count":0,"groups":[]},"referralId":"v-1343348211"},{"id":"4b7c8bedf964a5202c9a2fe3","name":"160
+        Columbia Heights","contact":{},"location":{"address":"160 Columbia Heights","lat":40.698257758667935,"lng":-73.9965267555425,"distance":351,"city":"Brooklyn","state":"NY","country":"United
+        States","cc":"US"},"categories":[],"verified":false,"stats":{"checkinsCount":140,"usersCount":20,"tipCount":1},"likes":{"count":0,"groups":[]},"specials":{"count":0,"items":[]},"hereNow":{"count":0,"groups":[]},"referralId":"v-1343348211"},{"id":"4c48dc0520ab1b8d6118fd15","name":"Movies
+        With A View","contact":{},"location":{"lat":40.701676,"lng":-73.99734,"distance":291,"country":"United
+        States","cc":"US"},"categories":[{"id":"4bf58dd8d48988d162941735","name":"Other
+        Great Outdoors","pluralName":"Other Great Outdoors","shortName":"Other Outdoors","icon":{"prefix":"https:\/\/foursquare.com\/img\/categories_v2\/parks_outdoors\/outdoors_","suffix":".png"},"primary":true}],"verified":false,"stats":{"checkinsCount":383,"usersCount":325,"tipCount":0},"likes":{"count":0,"groups":[]},"specials":{"count":0,"items":[]},"hereNow":{"count":0,"groups":[]},"referralId":"v-1343348211"},{"id":"4c704f0334443704e4cc235f","name":"Spiral
+        Pool","contact":{},"location":{"lat":40.69911312557534,"lng":-73.99703750285386,"distance":268,"postalCode":"11201","city":"Brooklyn","state":"New
+        York","country":"United States","cc":"US"},"categories":[{"id":"4bf58dd8d48988d165941735","name":"Scenic
+        Lookout","pluralName":"Scenic Lookouts","shortName":"Scenic Lookout","icon":{"prefix":"https:\/\/foursquare.com\/img\/categories_v2\/parks_outdoors\/sceniclookout_","suffix":".png"},"primary":true}],"verified":false,"stats":{"checkinsCount":43,"usersCount":24,"tipCount":0},"likes":{"count":0,"groups":[]},"specials":{"count":0,"items":[]},"hereNow":{"count":0,"groups":[]},"referralId":"v-1343348211"},{"id":"4f22ee6ee4b03bdcfb3d2ba6","name":"Yips","contact":{},"location":{"lat":40.70043453867425,"lng":-74.00178910920933,"distance":158,"country":"United
+        States","cc":"US"},"categories":[{"id":"4bf58dd8d48988d145941735","name":"Chinese
+        Restaurant","pluralName":"Chinese Restaurants","shortName":"Chinese","icon":{"prefix":"https:\/\/foursquare.com\/img\/categories_v2\/food\/chinese_","suffix":".png"},"primary":true}],"verified":false,"stats":{"checkinsCount":3,"usersCount":2,"tipCount":0},"likes":{"count":0,"groups":[]},"specials":{"count":0,"items":[]},"hereNow":{"count":0,"groups":[]},"referralId":"v-1343348211"},{"id":"4a9acb4bf964a520c13220e3","name":"Fruit
+        Street Sitting Area","contact":{},"location":{"address":"Columbia Heights","crossStreet":"Cranberry
+        St.","lat":40.70071529713512,"lng":-73.99523735046387,"distance":409,"city":"New
+        York","state":"NY","country":"United States","cc":"US"},"categories":[{"id":"4bf58dd8d48988d165941735","name":"Scenic
+        Lookout","pluralName":"Scenic Lookouts","shortName":"Scenic Lookout","icon":{"prefix":"https:\/\/foursquare.com\/img\/categories_v2\/parks_outdoors\/sceniclookout_","suffix":".png"},"primary":true}],"verified":true,"stats":{"checkinsCount":344,"usersCount":188,"tipCount":2},"likes":{"count":0,"groups":[]},"specials":{"count":0,"items":[]},"hereNow":{"count":0,"groups":[]},"referralId":"v-1343348211"},{"id":"4f0daebfe4b01660dcc0ecc2","name":"Morgan
+        stanley","contact":{},"location":{"address":"111 Wall St, Manhattan, NY 10043","lat":40.69994125694707,"lng":-74.00130706756083,"distance":110,"postalCode":"10043","city":"New
+        York","state":"NY","country":"United States","cc":"US"},"categories":[{"id":"4bf58dd8d48988d174941735","name":"Coworking
+        Space","pluralName":"Coworking Spaces","shortName":"Coworking Space","icon":{"prefix":"https:\/\/foursquare.com\/img\/categories_v2\/building\/office_coworkingspace_","suffix":".png"},"primary":true}],"verified":false,"stats":{"checkinsCount":5,"usersCount":1,"tipCount":0},"likes":{"count":0,"groups":[]},"specials":{"count":0,"items":[]},"hereNow":{"count":0,"groups":[]},"referralId":"v-1343348211"},{"id":"4f8cb450e4b09ac7a7540353","name":"24
+        Hour Picnic People","contact":{},"location":{"lat":40.70179491754677,"lng":-73.99722114200387,"distance":308,"postalCode":"10004","city":"New
+        York","state":"NY","country":"United States","cc":"US"},"categories":[{"id":"4bf58dd8d48988d163941735","name":"Park","pluralName":"Parks","shortName":"Park","icon":{"prefix":"https:\/\/foursquare.com\/img\/categories_v2\/parks_outdoors\/park_","suffix":".png"},"primary":true}],"verified":false,"stats":{"checkinsCount":29,"usersCount":13,"tipCount":0},"likes":{"count":0,"groups":[]},"specials":{"count":0,"items":[]},"hereNow":{"count":0,"groups":[]},"referralId":"v-1343348211"},{"id":"4edf95ab8231abf7c269aa8e","name":"Trans-Fast
+        Remittance LLC","contact":{"phone":"2123822828","formattedPhone":"(212) 382-2828"},"location":{"address":"110
+        Wall St, New York, NY 10005","lat":40.70206149009705,"lng":-74.0014842018679,"distance":261,"postalCode":"10005","city":"New
+        York","state":"NY","country":"United States","cc":"US"},"categories":[{"id":"4bf58dd8d48988d10a951735","name":"Bank","pluralName":"Banks","shortName":"Bank
+        \/ Financial","icon":{"prefix":"https:\/\/foursquare.com\/img\/categories_v2\/shops\/financial_","suffix":".png"},"primary":true}],"verified":false,"stats":{"checkinsCount":4,"usersCount":3,"tipCount":0},"likes":{"count":0,"groups":[]},"specials":{"count":0,"items":[]},"hereNow":{"count":0,"groups":[]},"referralId":"v-1343348211"},{"id":"4e2ee1ff483b93c2f2d97eb0","name":"BGC
+        Partners","contact":{},"location":{"lat":40.70266296308047,"lng":-74.00172199466637,"distance":330,"state":"NY","country":"United
+        States","cc":"US"},"categories":[{"id":"4d4b7105d754a06375d81259","name":"Professional
+        & Other Places","pluralName":"Professional & Other Places","shortName":"Professional
+        & Other Places","icon":{"prefix":"https:\/\/foursquare.com\/img\/categories_v2\/building\/default_","suffix":".png"},"primary":true}],"verified":false,"stats":{"checkinsCount":23,"usersCount":8,"tipCount":0},"likes":{"count":0,"groups":[]},"specials":{"count":0,"items":[]},"hereNow":{"count":0,"groups":[]},"referralId":"v-1343348211"},{"id":"4c2fbe00ed37a59340d86703","name":"Fort
+        Stirling Park","contact":{},"location":{"address":"Columbia Heights","crossStreet":"Clark
+        St","lat":40.69841734574097,"lng":-73.99583810532737,"distance":392,"city":"Brooklyn","state":"NY","country":"United
+        States","cc":"US"},"categories":[{"id":"4bf58dd8d48988d163941735","name":"Park","pluralName":"Parks","shortName":"Park","icon":{"prefix":"https:\/\/foursquare.com\/img\/categories_v2\/parks_outdoors\/park_","suffix":".png"},"primary":true}],"verified":true,"stats":{"checkinsCount":100,"usersCount":29,"tipCount":1},"likes":{"count":0,"groups":[]},"specials":{"count":0,"items":[]},"hereNow":{"count":0,"groups":[]},"referralId":"v-1343348211"},{"id":"4e33f3a37d8b6946c1f3d510","name":"Brooklyn
+        Bridge Swim","contact":{},"location":{"address":"Brooklyn Bridge Park","lat":40.7019830565045,"lng":-73.99606554255092,"distance":398,"postalCode":"11201","city":"Brooklyn","state":"NY","country":"United
+        States","cc":"US"},"categories":[{"id":"4bf58dd8d48988d1e2941735","name":"Beach","pluralName":"Beaches","shortName":"Beach","icon":{"prefix":"https:\/\/foursquare.com\/img\/categories_v2\/parks_outdoors\/beach_","suffix":".png"},"primary":true}],"verified":false,"stats":{"checkinsCount":254,"usersCount":215,"tipCount":0},"likes":{"count":0,"groups":[]},"specials":{"count":0,"items":[]},"hereNow":{"count":0,"groups":[]},"referralId":"v-1343348211"},{"id":"4c5435bf4623be9a62ee66f2","name":"Brooklyn
+        Borough Park - Pier 4","contact":{},"location":{"address":"214 Furman St","crossStreet":"Montague
+        St","lat":40.695879098044465,"lng":-73.99814507380714,"distance":484,"postalCode":"11201","city":"Brooklyn","state":"New
+        York","country":"United States","cc":"US"},"categories":[{"id":"4bf58dd8d48988d163941735","name":"Park","pluralName":"Parks","shortName":"Park","icon":{"prefix":"https:\/\/foursquare.com\/img\/categories_v2\/parks_outdoors\/park_","suffix":".png"},"primary":true}],"verified":false,"stats":{"checkinsCount":512,"usersCount":408,"tipCount":1},"likes":{"count":0,"groups":[]},"specials":{"count":0,"items":[]},"hereNow":{"count":0,"groups":[]},"referralId":"v-1343348211"},{"id":"4a882e27f964a520590520e3","name":"Harry
+        Chapin Playground","contact":{},"location":{"address":"Middagh & Columbia
+        Heights","lat":40.700682,"lng":-73.994859,"distance":440,"city":"New York","state":"NY","country":"United
+        States","cc":"US"},"categories":[{"id":"4bf58dd8d48988d1e7941735","name":"Playground","pluralName":"Playgrounds","shortName":"Playground","icon":{"prefix":"https:\/\/foursquare.com\/img\/categories_v2\/parks_outdoors\/playground_","suffix":".png"},"primary":true}],"verified":true,"stats":{"checkinsCount":249,"usersCount":128,"tipCount":1},"likes":{"count":0,"groups":[]},"specials":{"count":0,"items":[]},"hereNow":{"count":1,"groups":[{"type":"others","name":"Other
+        people here","count":1,"items":[]}]},"referralId":"v-1343348211"},{"id":"4d6d118e1dfca35d14ea42e0","name":"AHRC-
+        New York City","contact":{},"location":{"address":"83","lat":40.700182029302574,"lng":-74.0049797352277,"distance":420,"postalCode":"10038","city":"New
+        York","state":"New York","country":"United States","cc":"US"},"categories":[{"id":"4bf58dd8d48988d124941735","name":"Office","pluralName":"Offices","shortName":"Corporate
+        \/ Office","icon":{"prefix":"https:\/\/foursquare.com\/img\/categories_v2\/building\/default_","suffix":".png"},"primary":true}],"verified":false,"stats":{"checkinsCount":31,"usersCount":10,"tipCount":0},"likes":{"count":0,"groups":[]},"hereNow":{"count":0,"groups":[]},"referralId":"v-1343348211"},{"id":"4dbd86d243a1d8504ba74df3","name":"Five
+        Boro Bike - Con Ed Rest Stop","contact":{},"location":{"lat":40.69745380465409,"lng":-73.99801308382229,"distance":329,"state":"NY","country":"United
+        States","cc":"US"},"categories":[{"id":"4d4b7105d754a06377d81259","name":"Great
+        Outdoors","pluralName":"Great Outdoors","shortName":"Parks & Outdoors","icon":{"prefix":"https:\/\/foursquare.com\/img\/categories_v2\/parks_outdoors\/default_","suffix":".png"},"primary":true}],"verified":false,"stats":{"checkinsCount":57,"usersCount":54,"tipCount":1},"likes":{"count":0,"groups":[]},"specials":{"count":0,"items":[]},"hereNow":{"count":0,"groups":[]},"referralId":"v-1343348211"},{"id":"4c59a029f346c92803034dca","name":"Mobotix","contact":{},"location":{"address":"110
+        wall st","crossStreet":"Fulton","lat":40.702672,"lng":-73.997589,"distance":360,"city":"New
+        York","state":"New York","country":"United States","cc":"US"},"categories":[],"verified":false,"stats":{"checkinsCount":6,"usersCount":1,"tipCount":0},"likes":{"count":0,"groups":[]},"specials":{"count":0,"items":[]},"hereNow":{"count":0,"groups":[]},"referralId":"v-1343348211"}]}}'
+    http_version: '1.1'
+  recorded_at: Fri, 27 Jul 2012 00:16:51 GMT
+- request:
+    method: get
+    uri: https://graph.facebook.com/search?center=40.7,-74&distance=1000&type=place&access_token=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      access-control-allow-origin:
+      - ! '*'
+      cache-control:
+      - no-store
+      content-type:
+      - text/javascript; charset=UTF-8
+      expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      pragma:
+      - no-cache
+      www-authenticate:
+      - OAuth "Facebook Platform" "invalid_token" "An access token is required to
+        request this resource."
+      x-fb-rev:
+      - '599053'
+      x-fb-debug:
+      - zmMD2EB2e0mFQ/MB5TS0rkPNO2lg6Vr0WMzPfWz4tA0=
+      date:
+      - Fri, 27 Jul 2012 00:16:55 GMT
+      connection:
+      - close
+      content-length:
+      - '112'
+    body:
+      encoding: US-ASCII
+      string: ! '{"error":{"message":"An access token is required to request this
+        resource.","type":"OAuthException","code":104}}'
+    http_version: '1.1'
+  recorded_at: Fri, 27 Jul 2012 00:16:55 GMT
+recorded_with: VCR 2.2.4

@@ -19,9 +19,9 @@ gem 'rails3-generators'
 gem 'haml'
 gem 'haml-rails'
 gem 'aws-s3'
-gem 'mongoid-paperclip', require: 'mongoid_paperclip'
 gem 'dynamic_form'
 gem 'httparty'
+gem 'rack'
 
 gem 'omniauth' # It's a sane default these days
 gem 'omniauth-facebook'
@@ -44,10 +44,13 @@ group :development do
 end
 
 group :test, :development do
+  gem 'mechanize'
+  
   gem 'debugger'
   gem 'factory_girl_rails'
   gem 'rspec-rails'
   gem 'capybara'
+  gem 'capybara-json'
   gem 'launchy'
   gem 'database_cleaner'
   gem 'mongoid-rspec'
@@ -57,9 +60,11 @@ group :test, :development do
   gem 'vcr'
   gem 'fakeweb'
   gem 'email_spec'
+  gem 'hirb'
   gem 'pry'
-  gem 'pry-nav'
-
+  gem 'pry-doc'
+  gem 'pry-rails'
+  gem 'oauthorizer', path: '~/Projects/oauthorizer'
   # Pretty printed test output
   gem 'turn', require: false
 

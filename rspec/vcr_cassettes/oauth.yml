@@ -1,0 +1,84 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://accounts.google.com/o/oauth2/token
+    body:
+      encoding: US-ASCII
+      string: code=4%2FIcGEsYISov-fHW3Mxyrw50KYX1zW.Yr4h4nHIlt0auJJVnL49Cc_4xJ5bbwI&grant_type=authorization_code&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fusers%2Fproviders%2Fgoogle%2Foauth&client_id=810357465890.apps.googleusercontent.com&client_secret=--L1_mB53ldqyy0GIYbox0jC
+    headers:
+      connection:
+      - close
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      cache-control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      pragma:
+      - no-cache
+      expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      date:
+      - Sat, 02 Jun 2012 15:26:30 GMT
+      content-type:
+      - application/json
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+      server:
+      - GSE
+      connection:
+      - close
+    body:
+      encoding: US-ASCII
+      string: ! "{\n  \"error\" : \"unauthorized_client\"\n}"
+    http_version: '1.1'
+  recorded_at: Sat, 02 Jun 2012 15:26:35 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/oauth2/v1/userinfo?access_token=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      connection:
+      - close
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      www-authenticate:
+      - GoogleLogin realm="https://www.google.com/accounts/ClientLogin", service="lso"
+      content-type:
+      - application/json; charset=UTF-8
+      date:
+      - Sat, 02 Jun 2012 15:33:05 GMT
+      expires:
+      - Sat, 02 Jun 2012 15:33:05 GMT
+      cache-control:
+      - private, max-age=0
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+      server:
+      - GSE
+      connection:
+      - close
+    body:
+      encoding: US-ASCII
+      string: ! "{\n \"error\": {\n  \"errors\": [\n   {\n    \"domain\": \"com.google.auth\",\n
+        \   \"reason\": \"invalidAuthentication\",\n    \"message\": \"invalid header\",\n
+        \   \"locationType\": \"header\",\n    \"location\": \"Authorization\"\n   }\n
+        \ ],\n  \"code\": 401,\n  \"message\": \"invalid header\"\n }\n}\n"
+    http_version: '1.1'
+  recorded_at: Sat, 02 Jun 2012 15:33:11 GMT
+recorded_with: VCR 2.2.0

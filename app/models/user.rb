@@ -27,22 +27,11 @@ class User
     provider 
   end
 
-  def self.find_or_create_from_provider provider_type, provider_token
-    provider_class = Object::const_get(provider_type.classify)::const_get('Provider')
-    uid            = provider_class.get_uid provider_token
+  def self.find_or_create_from_provider provider_class, uid
     
     user = User.where('providers.uid' => uid, 'provider._type' => provider_class.to_s).first
-    if user
-      user.providers.where('_type' => provider_class.to_s).first.update_attribute :token, provider_token
-    else
-      user = User.create!(providers: 
-        [ 
-          provider_class.new(
-            token: provider_token, 
-            uid: uid
-          ) 
-        ]
-      )
+    unless user
+      user = User.create!(providers: [ provider_class.new(uid: uid) ])
     end
     user 
   end

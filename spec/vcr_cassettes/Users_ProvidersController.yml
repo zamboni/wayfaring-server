@@ -1,0 +1,154 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://accounts.google.com/o/oauth2/token
+    body:
+      encoding: US-ASCII
+      string: code=4%2FmK8skxwMDMWodKM0atNuCbAprluA.Used62A_UJYWuJJVnL49Cc8CSa9OcQI&grant_type=authorization_code&redirect_uri=http%3A%2F%2F127.0.0.1%3A3030%2Fcallbacks%2Fgoogle.json&client_id=&client_secret=2012-07-20%2018%3A43%3A41%20-0700
+    headers: {}
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      cache-control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      pragma:
+      - no-cache
+      expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      date:
+      - Sat, 21 Jul 2012 02:20:16 GMT
+      content-type:
+      - application/json
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+      server:
+      - GSE
+      connection:
+      - close
+    body:
+      encoding: US-ASCII
+      string: ! "{\n  \"error\" : \"invalid_request\"\n}"
+    http_version: '1.1'
+  recorded_at: Sat, 21 Jul 2012 02:20:16 GMT
+- request:
+    method: post
+    uri: https://accounts.google.com/o/oauth2/token
+    body:
+      encoding: US-ASCII
+      string: code=kACAH-1Ng3OEr13RvC6Rrz_huYIDgr0oAa-HhoKMy_a0T9u2oTZywCR0oJ8y7Yd_LKz_I1-hfK3xsKm9fJBGFiynv1GXiuQ17Cqv511A8arOg5KXXmToyC5WLU&grant_type=authorization_code&redirect_uri=http%3A%2F%2F127.0.0.1%3A3030%2Fusers%2Fproviders%2Fgoogle%2Fauthorize&client_id=705000476449.apps.googleusercontent.com&client_secret=RwxjskQT7HM1P7n7CTB-40Wo
+    headers: {}
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      cache-control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      pragma:
+      - no-cache
+      expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      date:
+      - Sat, 21 Jul 2012 05:00:33 GMT
+      content-type:
+      - application/json
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+      server:
+      - GSE
+      connection:
+      - close
+    body:
+      encoding: US-ASCII
+      string: ! "{\n  \"error\" : \"invalid_grant\"\n}"
+    http_version: '1.1'
+  recorded_at: Sat, 21 Jul 2012 05:00:33 GMT
+- request:
+    method: get
+    uri: https://www.googleapis.com/oauth2/v1/userinfo?access_token=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      www-authenticate:
+      - GoogleLogin realm="https://www.google.com/accounts/ClientLogin", service="lso"
+      content-type:
+      - application/json; charset=UTF-8
+      date:
+      - Sat, 21 Jul 2012 05:01:30 GMT
+      expires:
+      - Sat, 21 Jul 2012 05:01:30 GMT
+      cache-control:
+      - private, max-age=0
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+      server:
+      - GSE
+      connection:
+      - close
+    body:
+      encoding: US-ASCII
+      string: ! "{\n \"error\": {\n  \"errors\": [\n   {\n    \"domain\": \"global\",\n
+        \   \"reason\": \"authError\",\n    \"message\": \"Invalid Credentials\",\n
+        \   \"locationType\": \"header\",\n    \"location\": \"Authorization\"\n   }\n
+        \ ],\n  \"code\": 401,\n  \"message\": \"Invalid Credentials\"\n }\n}\n"
+    http_version: '1.1'
+  recorded_at: Sat, 21 Jul 2012 05:01:30 GMT
+- request:
+    method: post
+    uri: https://accounts.google.com/o/oauth2/token
+    body:
+      encoding: US-ASCII
+      string: code=kACAH-1Ng3OEr13RvC6Rrz_huYIDgr0oAa-HhoKMy_a0T9u2oTZywCR0oJ8y7Yd_LKz_I1-hfK3xsKm9fJBGFiynv1GXiuQ17Cqv511A8arOg5KXXmToyC5WLU&grant_type=authorization_code&redirect_uri=http%3A%2F%2F127.0.0.1%3A3030%2Fusers%2Fproviders%2Fgoogle%2Fauthorize&client_id=26827780047.apps.googleusercontent.com&client_secret=fXm1-GlSlghfeL_5MPuD-vAg
+    headers: {}
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      cache-control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      pragma:
+      - no-cache
+      expires:
+      - Fri, 01 Jan 1990 00:00:00 GMT
+      date:
+      - Sat, 21 Jul 2012 10:15:38 GMT
+      content-type:
+      - application/json
+      x-content-type-options:
+      - nosniff
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+      server:
+      - GSE
+      connection:
+      - close
+    body:
+      encoding: US-ASCII
+      string: ! "{\n  \"error\" : \"invalid_grant\"\n}"
+    http_version: '1.1'
+  recorded_at: Sat, 21 Jul 2012 10:15:38 GMT
+recorded_with: VCR 2.2.3

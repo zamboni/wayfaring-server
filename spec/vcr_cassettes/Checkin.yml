@@ -2,15 +2,15 @@
 http_interactions:
 - request:
     method: post
-    uri: https://api.foursquare.com/v2/checkins/add?oauth_token=UJ4S0DJFXU00KFVFF1T4CX5FNFFD4JOSIVT52HGPM3YXC2OV&venueId=1234&broadcast=public
+    uri: https://api.foursquare.com/v2/checkins/add?oauth_token=&venueId=1234&broadcast=public
     body:
       encoding: US-ASCII
       string: ''
     headers: {}
   response:
     status:
-      code: 200
-      message: OK
+      code: 400
+      message: Bad Request
     headers:
       access-control-allow-origin:
       - ! '*'
@@ -19,74 +19,63 @@ http_interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Wed, 18 Jul 2012 03:32:45 GMT
+      - Fri, 03 Aug 2012 21:11:41 GMT
       expires:
-      - Wed, 18 Jul 2012 03:32:45 GMT
+      - Fri, 3 Aug 2012 21:11:41 GMT
       pragma:
       - no-cache
       server:
       - nginx/1.2.1
-      x-ratelimit-limit:
-      - '500'
-      x-ratelimit-remaining:
-      - '499'
       content-length:
-      - '3142'
+      - '176'
       connection:
       - Close
     body:
       encoding: US-ASCII
-      string: ! '{"meta":{"code":200,"errorType":"deprecated","errorDetail":"Please
-        provide an API version to avoid future errors.See http:\/\/bit.ly\/vywCav"},"notifications":[{"type":"notificationTray","item":{"unreadCount":0}},{"type":"message","item":{"message":"OK!
-        We''ve got you @ Bar 29. You''ve been here 3 times."}},{"type":"mayorship","item":{"type":"nochange","checkins":5,"user":{"id":"16263220","firstName":"Alison","lastName":"K.","photo":"https:\/\/is1.4sqi.net\/userpix_thumbs\/H1D40UZOHTLHMGWS.jpg","tips":{"count":0},"gender":"female","homeCity":"USA","bio":"","contact":{"twitter":"alisonknyc","facebook":"528803668"}},"message":"Alison
-        K. is mayor of Bar 29","image":"https:\/\/is1.4sqi.net\/userpix_thumbs\/H1D40UZOHTLHMGWS.jpg"}},{"type":"tip","item":{"tip":{"id":"4ec58307722eeaa24bc197aa","createdAt":1321566983,"text":"Love
-        this place....!!!","url":"http:\/\/www.yelp.com\/biz\/bar-29-manhattan#hrid:7uszwAEXZnpK1Y5UI22ItA\/src:self","likes":{"count":1,"groups":[],"summary":"1
-        like"},"like":false,"todo":{"count":0},"done":{"count":1},"user":{"id":"12169700","firstName":"Jake","lastName":"D.","photo":"https:\/\/is0.4sqi.net\/userpix_thumbs\/4GKECQ4IX4BE2JIB.jpg","tips":{"count":1},"gender":"male","homeCity":"New
-        York, NY","bio":"","contact":{"twitter":"jake_dun","facebook":"581077486"}}},"name":"Popular
-        tip"}},{"type":"leaderboard","item":{"leaderboard":[{"user":{"id":"20566366","firstName":"RebelHold","lastName":"Test","relationship":"self","photo":"https:\/\/is1.4sqi.net\/userpix_thumbs\/Q0VE5U4RDXS52EU1.png","tips":{"count":0},"lists":{"groups":[{"type":"created","count":1,"items":[]}]},"gender":"male","homeCity":"Phoenix","bio":"","contact":{"email":"test@rebelhold.com"}},"scores":{"recent":4,"max":41,"goal":50,"checkinsCount":1},"rank":1}],"scores":[{"points":4,"icon":"https:\/\/foursquare.com\/img\/points\/foursquare.png","message":"It''s
-        been 6 weeks since your last check-in. Welcome back to foursquare!"}],"total":4}},{"type":"score","item":{"scores":[{"points":4,"icon":"https:\/\/foursquare.com\/img\/points\/foursquare.png","message":"It''s
-        been 6 weeks since your last check-in. Welcome back to foursquare!"}],"total":4}}],"response":{"checkin":{"id":"50062e5de4b0ecb45406ac24","createdAt":1342582365,"type":"checkin","timeZone":"America\/New_York","timeZoneOffset":-240,"venue":{"id":"3fd66200f964a52060e71ee3","name":"Bar
-        29","contact":{"phone":"2127790306","formattedPhone":"(212) 779-0306"},"location":{"address":"405
-        Third Avenue","crossStreet":"btw 28th and 29th St","lat":40.742407,"lng":-73.980599,"postalCode":"10016","city":"New
-        York","state":"NY","country":"United States","cc":"US"},"categories":[{"id":"4bf58dd8d48988d116941735","name":"Bar","pluralName":"Bars","shortName":"Bar","icon":"https:\/\/foursquare.com\/img\/categories\/nightlife\/bar.png","parents":["Nightlife
-        Spots"],"primary":true}],"verified":true,"stats":{"checkinsCount":2344,"usersCount":1502,"tipCount":24},"likes":{"count":0,"groups":[]},"beenHere":{"count":0}},"likes":{"count":0,"groups":[]},"photos":{"count":0,"items":[]},"comments":{"count":0,"items":[]},"source":{"name":"wayfaring","url":"http:\/\/rebelhold.com"}}}}'
+      string: ! '{"meta":{"code":400,"errorType":"invalid_auth","errorDetail":"Missing
+        access credentials. See https:\/\/developer.foursquare.com\/docs\/oauth.html
+        for details."},"response":{}}'
     http_version: '1.1'
-  recorded_at: Wed, 18 Jul 2012 03:32:45 GMT
+  recorded_at: Fri, 03 Aug 2012 21:11:41 GMT
 - request:
     method: post
-    uri: https://graph.facebook.com/me/checkins?oauth_token=BAAErTBz7PZB0BAMLiGa1zq1CYA9sflZCkZA66L0TVdpH2p73xWK3VqvYrRIkzR23n6PmvI4cyqZBMvTMpYY0iARqOVowEz0tiZBcVRE0QoSrPG4wYAY9fj40dvIluyL4xng9DjJ3RqgZDZD&place=111871368829109&coordinates[latitude]=40.69994125694707&coordinates[longitude]=73.99903456915965
+    uri: https://graph.facebook.com/me/checkins?oauth_token=&place=111871368829109&coordinates[latitude]=40.69994125694707&coordinates[longitude]=73.99903456915965
     body:
       encoding: US-ASCII
       string: ''
     headers: {}
   response:
     status:
-      code: 200
-      message: OK
+      code: 400
+      message: Bad Request
     headers:
       access-control-allow-origin:
       - ! '*'
       cache-control:
-      - private, no-cache, no-store, must-revalidate
+      - no-store
       content-type:
       - text/javascript; charset=UTF-8
       expires:
       - Sat, 01 Jan 2000 00:00:00 GMT
       pragma:
       - no-cache
+      www-authenticate:
+      - OAuth "Facebook Platform" "invalid_request" "An active access token must be
+        used to query information about the current user."
       x-fb-rev:
-      - '592913'
+      - '603731'
       x-fb-debug:
-      - DuI3QDEaL24Rk0EvtUT45ilqQfvh6Vwy9PnuExTCVlw=
+      - RxrVR11QGsYCQm6tWGwlAIlGAiQ0OVlwZdMdFqnXxEI=
       date:
-      - Wed, 18 Jul 2012 03:32:50 GMT
+      - Fri, 03 Aug 2012 21:11:45 GMT
       connection:
       - close
       content-length:
-      - '24'
+      - '140'
     body:
       encoding: US-ASCII
-      string: ! '{"id":"265596973548730"}'
+      string: ! '{"error":{"message":"An active access token must be used to query
+        information about the current user.","type":"OAuthException","code":2500}}'
     http_version: '1.1'
-  recorded_at: Wed, 18 Jul 2012 03:32:50 GMT
-recorded_with: VCR 2.2.3
+  recorded_at: Fri, 03 Aug 2012 21:11:45 GMT
+recorded_with: VCR 2.2.4

@@ -1,0 +1,33 @@
+google:
+  client_id: 26827780047.apps.googleusercontent.com
+  client_secret: fXm1-GlSlghfeL_5MPuD-vAg
+  scope: https://www.googleapis.com/auth/latitude.all.best+https://www.googleapis.com/auth/userinfo.profile+https://www.googleapis.com/auth/userinfo.email
+  redirect_uri: http://localhost:3030/callbacks/google.json
+  server_port: 3030
+  user_email: test@zambonidev.com
+  user_password: hefu-lino-ke-cyt
+  access_token: ya29.AHES6ZTU0ufgUPK0kfpIm-7ea8VX1cAFz93PxdcDWimMfL0
+  token_type: Bearer
+  expires_in: 3600
+  id_token: eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJhY2NvdW50cy5nb29nbGUuY29tIiwiYXVkIjoiMjY4Mjc3ODAwNDcuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJjaWQiOiIyNjgyNzc4MDA0Ny5hcHBzLmdvb2dsZXVzZXJjb250ZW50LmNvbSIsImlkIjoiMTE0Mjc1MTA1NDYwMDEwNjI0MjY0IiwiZW1haWwiOiJ0ZXN0QHphbWJvbmlkZXYuY29tIiwidmVyaWZpZWRfZW1haWwiOiJ0cnVlIiwidG9rZW5faGFzaCI6InhQSm5EOU5DTWJsbDV3N1ZTUmdOUGciLCJoZCI6InphbWJvbmlkZXYuY29tIiwiaWF0IjoxMzQ0MTQzNDI1LCJleHAiOjEzNDQxNDczMjV9.um7HSk-FCzDzHih07etWeW5zAxf1D8EGjoW9Qsl4XUKltKf0fzXY111HoAgx4T09HaDwuQVT5Gv3WngdjJBjFerom4iPHvDNoTopqEfDYgyKiLh5z8ejSeBbG6YgKNBIFpq1DRNkRmiAWwjdqWry1g0Rv411HvkHLIp5qt31oBI
+  refresh_token: 1/-atFkqQFQmsgcgpAQzZjI2VL13uHMgFmV-Zf3-MkjOc
+  expires_at: 2012-08-04 23:15:24.479042000 -07:00
+facebook:
+  client_id: 392520774140968
+  client_secret: ffe43e9eaa183347a9c25672fa34d646
+  scope: publish_checkins
+  redirect_uri: http://localhost:3030/callbacks/facebook.json
+  state: stuff
+  user_email: fletch@zambonidev.com
+  user_password: woly-qui-phyg-vo
+  server_port: 3030
+  access_token: SMLUY34ML3BQOWQGK5JA3Z225ZMV4EMZRQHJO3HHTHWIBMO5
+  expires: '5106035'
+  expires_at: 2012-08-05 03:21:14.698432000 -07:00
+foursquare:
+  server_port: 3030
+  client_id: YUORTWIN2CBQWOQWLRZLKU0CLL5KHJC2OO0TDXJZCRELNXIL
+  client_secret: XVKHJQE5KIUUVX24FFLPQAMZWWT2UA2AAFYAR0X40JP2UIBV
+  redirect_uri: http://localhost:3030/callbacks/foursquare.json
+  user_email: test@zambonidev.com
+  user_password: t3sting

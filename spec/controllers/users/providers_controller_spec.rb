@@ -1,11 +1,43 @@
 require 'spec_helper'
 
 describe Users::ProvidersController do
+  # use_vcr_cassette
   context 'oauth' do
     context 'Google' do
       before do
-        get :authorize, provider_type: 'google', refesh_token: mocked_refesh_token_for('google'), access_token: mocked_access_token_for('google'), expires_in: 3600
+        pending 'fix oatherizer'
+        oauther = Oauthorizer::Token.new
+        code = oauther.get_google_code['code']
+        get :authorize, provider_type: 'google', code: code
       end
+
+      it 'has stuff' do
+        User.first.should be
+        User.first.providers.first._type.should == 'Google::Provider'
+        User.first.providers.first.token.should be
+        User.first.providers.first.refresh_token.should be
+        User.first.providers.first.expiration.should be
+      end
+
+      # it 'has a user' do
+      #   User.first.should be
+      # end
+
+      # it 'has a google provider' do
+      #   User.first.providers.first._type.should == 'Google::Provider'
+      # end
+
+      # it 'has a access token' do
+      #   User.first.providers.first.token.should be
+      # end
+
+      # it 'has a refresh token' do
+      #   User.first.providers.first.refresh_token.should be
+      # end
+
+      # it 'has a expiration date' do
+      #   User.first.providers.first.expiration.should be
+      # end
 
     end      
   end
@@ -15,7 +47,7 @@ describe Users::ProvidersController do
         @user = FactoryGirl.create :user_with_foursquare
       end
       it 'logs a user out by removing their access token' do
-        delete :destroy, user_id: @user.id, provider: {type: 'foursquare'}, format: 'json'
+        delete :destroy, user_id: @user.id, id: 'foursquare', provider: {type: 'foursquare'}, format: 'json'
         @user.reload
         @user.providers.first.token.should_not be
       end
@@ -26,7 +58,7 @@ describe Users::ProvidersController do
         @user = FactoryGirl.create :user_with_facebook
       end
       it 'logs a user out by removing their access token' do
-        delete :destroy, user_id: @user.id, provider: {type: 'facebook'}, format: 'json'
+        delete :destroy, user_id: @user.id, id: 'foursquare', provider: {type: 'facebook'}, format: 'json'
         @user.reload
         @user.providers.first.token.should_not be
       end

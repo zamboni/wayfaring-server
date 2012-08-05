@@ -8,4 +8,11 @@ RebelFoundation::Application.routes.draw do
   resources :checkins
   resources :venues
   resources :providers
+  resources :callbacks do
+    collection do
+      get 'google'
+      get 'facebook'
+    end
+  end
+  resources :pages
 end

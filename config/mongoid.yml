@@ -1,19 +1,15 @@
 development:
   sessions:
     default:
-      database: rebel_foundation_development
+      database: wayfaring_development
       hosts: 
         - localhost:27017
 
 test:
   sessions:
     default:
+      database: wayfaring_test
       hosts: 
         - localhost:27017
-      database: rebel_foundation_test
 
 # set these environment variables on your prod server
-production:
-  sessions:
-    default:
-      uri: <%= ENV['MONGOHQ_URL'] %>
