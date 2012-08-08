@@ -6,12 +6,12 @@ FactoryGirl.define do
   end
   
   factory :foursquare_provider, class: Foursquare::Provider do
-    uid   oauthorizer_keys[:uid]
-    token oauthorizer_keys[:token]
+    uid   oauthorizer_keys['foursquare']['uid']
+    token oauthorizer_keys['foursquare']['access_token']
   end
 
   factory :facebook_provider, class: Facebook::Provider do
-    token oauthorizer_keys[:token]
+    token oauthorizer_keys['facebook']['access_token']
   end
 
 end

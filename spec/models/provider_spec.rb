@@ -5,7 +5,7 @@ describe Provider do
   context 'creates a provider of type' do
     context 'Foursquare' do
       before do
-        @user = User.find_or_create_from_provider 'foursquare', mocked_token_for('foursquare')
+        @user = User.find_or_create_from_provider Foursquare::Provider, mocked_token_for('foursquare')
       end
       
       it 'with class' do
@@ -23,7 +23,7 @@ describe Provider do
     
     context 'Facebook' do
       before do
-        @user = User.find_or_create_from_provider 'facebook', mocked_token_for('facebook')
+        @user = User.find_or_create_from_provider Foursquare::Provider, mocked_token_for('facebook')
       end
       
       it 'with class' do
@@ -41,7 +41,7 @@ describe Provider do
 
     context 'Google' do
       before do
-        @user = User.find_or_create_from_provider 'google', mocked_token_for('google')
+        @user = User.find_or_create_from_provider Google::Provider, mocked_token_for('google')
       end
       
       it 'with class' do

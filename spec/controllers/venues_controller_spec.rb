@@ -28,7 +28,7 @@ describe VenuesController do
       end
       
       it 'returns a list of venues' do
-        JSON.parse(response.body).count.should > 20
+        JSON.parse(response.body).count.should >= 20
       end
     end
   end

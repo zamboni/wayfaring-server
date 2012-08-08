@@ -15,7 +15,6 @@ describe Checkin do
       end
 
       it "checks into Foursquare" do
-        debugger
         @checkin.provider_checkins.first.response['meta']['code'].should == 200
       end
     end

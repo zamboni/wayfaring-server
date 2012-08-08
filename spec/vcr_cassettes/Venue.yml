@@ -298,4 +298,88 @@ http_interactions:
         resource.","type":"OAuthException","code":104}}'
     http_version: '1.1'
   recorded_at: Fri, 27 Jul 2012 00:16:55 GMT
+- request:
+    method: get
+    uri: https://graph.facebook.com/search?center=40.7,-74&distance=1000&type=place&access_token=AAAFkZCt1PRCgBAL7ZB6EuEHGBScnBULkNMmrWtWWVqx3v5P2UT0KzPUU1iz0K7dc7rJZC8QIt3BRdQBP0hLEgUzGLhJQwKSGQIrp7oOQgZDZD
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      access-control-allow-origin:
+      - ! '*'
+      cache-control:
+      - private, no-cache, no-store, must-revalidate
+      content-type:
+      - text/javascript; charset=UTF-8
+      etag:
+      - ! '"58b3f918715691a9bd6f7d37312458c8b0f64de0"'
+      expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      pragma:
+      - no-cache
+      x-fb-rev:
+      - '606212'
+      x-fb-debug:
+      - 7FUld3ZQkAkvxsddm39EbOo2yZ938dETKkfTqbCeq+g=
+      date:
+      - Wed, 08 Aug 2012 08:28:25 GMT
+      connection:
+      - close
+      content-length:
+      - '5241'
+    body:
+      encoding: US-ASCII
+      string: ! '{"data":[{"name":"little Italy and china town","category":"Local
+        business","location":{"city":"New York","state":"NY","country":"United States","latitude":40.7001904,"longitude":-73.9999618},"id":"209151869145260"},{"name":"Middle
+        of the East River","category":"Local business","location":{"city":"New York","state":"NY","country":"United
+        States","latitude":40.700053,"longitude":-73.999961},"id":"198625430189806"},{"name":"Brooklyn
+        Height","category":"Local business","location":{"city":"Brooklyn","state":"NY","country":"United
+        States","latitude":40.7002566,"longitude":-74.000274},"id":"249558241749268"},{"name":"Manhatten
+        Bridge","category":"Local business","location":{"city":"New York","state":"NY","country":"United
+        States","latitude":40.699594,"longitude":-73.999764},"id":"140761145975952"},{"name":"financial
+        square, 32 Old Slip","category":"Local business","location":{"city":"New York","state":"NY","country":"United
+        States","latitude":40.699562,"longitude":-74.000928},"id":"115905168480631"},{"name":"Pier
+        15","category":"Local business","location":{"city":"New York","state":"NY","country":"United
+        States","latitude":40.7001034,"longitude":-74.0011728},"id":"259033467440640"},{"name":"Staten
+        Island Ferry","category":"Local business","location":{"city":"New York","state":"NY","country":"United
+        States","latitude":40.701057926026,"longitude":-73.999253729144},"id":"348453905220593"},{"name":"The
+        Statue of Liberty","category":"Local business","location":{"city":"New York","state":"NY","country":"United
+        States","zip":"10004","latitude":40.7001719,"longitude":-74.0015504},"id":"154297594647403"},{"name":"Bateaux
+        New York Cruise","category":"Local business","location":{"city":"New York","state":"NY","country":"United
+        States","latitude":40.7005316,"longitude":-74.001885},"id":"297536380259633"},{"name":"Johny
+        Rockets","category":"Local business","location":{"city":"New York","state":"NY","country":"United
+        States","latitude":40.7013323,"longitude":-74.00136055},"id":"221352684592777"},{"name":"Keg
+        229","category":"Local business","location":{"city":"Brooklyn","state":"NY","country":"United
+        States","zip":"10038","latitude":40.70028042,"longitude":-73.99745804},"id":"180573655288176"},{"name":"At
+        the South Street Seaport","category":"Local business","location":{"city":"New
+        York","state":"NY","country":"United States","latitude":40.6989396,"longitude":-73.9975711},"id":"262670710441451"},{"name":"The
+        River Caf\u00e9, by the Brooklyn Bridge","category":"Local business","location":{"city":"New
+        York","state":"NY","country":"United States","latitude":40.6984513,"longitude":-73.9977197},"id":"216025898472643"},{"name":"Seaport","category":"Local
+        business","location":{"city":"New York","state":"NY","country":"United States","latitude":40.698173799512,"longitude":-74.001802603531},"id":"219480034728744"},{"name":"Sequoia
+        New York","category":"Restaurant\/cafe","location":{"street":"Pier 17, South
+        Street Seaport","city":"New York","state":"NY","country":"United States","zip":"10038","latitude":40.702336381396,"longitude":-74.000201447311},"id":"52922570998"},{"name":"World
+        Yacht at Pier 81","category":"Local business","location":{"city":"New York","state":"NY","country":"United
+        States","latitude":40.702259985909,"longitude":-73.999771399236},"id":"275748275780399"},{"name":"Hudson
+        River Community Sailing","category":"Local business","location":{"street":"201
+        12 Ave, Pier 66 at W 26 St and the Hudson River","city":"Manhattan","state":"NY","country":"United
+        States","zip":"10001","latitude":40.69894,"longitude":-73.99685},"id":"330890531075"},{"name":"Chelsea
+        Piers Sky Rink","category":"Sports venue","location":{"street":"Pier 61","city":"New
+        York","state":"NY","country":"United States","zip":"10011","latitude":40.69893,"longitude":-73.99677},"id":"60046606076"},{"name":"Brooklyn
+        Bridge Park","category":"Local business","location":{"city":"Brooklyn","state":"NY","country":"United
+        States","latitude":40.702781909089,"longitude":-73.99342409526},"id":"131440186900532"},{"name":"Circle
+        Line Downtown","category":"Tours\/sightseeing","location":{"street":"South
+        Street Seaport","city":"New York","state":"NY","country":"United States","zip":"10038","latitude":40.69863,"longitude":-73.99699},"id":"140694084403"},{"name":"Pier
+        2 - Brooklyn Bridge Park Pop-Up Pool","category":"Local business","location":{"city":"New
+        York","state":"NY","country":"United States","latitude":40.699961255342,"longitude":-73.996700830827},"id":"257143544401498"},{"name":"Physio
+        Logic","category":"Local business","location":{"street":"Brooklyn Heights
+        & Manhattan ","city":"New York","state":"NY","country":"United States","zip":"11201","latitude":40.69783,"longitude":-73.99713},"id":"103288356405673"},{"name":"Clothe
+        New World","category":"Local business","location":{"street":"177 Columbia
+        Heights","city":"Brooklyn","state":"NY","country":"United States","zip":"11201","latitude":40.6971703,"longitude":-73.9968567},"id":"305828719430287"}],"paging":{"next":"https:\/\/graph.facebook.com\/search?type=place&center=40.7,-74&distance=1000&access_token=AAAFkZCt1PRCgBAL7ZB6EuEHGBScnBULkNMmrWtWWVqx3v5P2UT0KzPUU1iz0K7dc7rJZC8QIt3BRdQBP0hLEgUzGLhJQwKSGQIrp7oOQgZDZD&limit=25&offset=25&__after_id=305828719430287"}}'
+    http_version: '1.1'
+  recorded_at: Wed, 08 Aug 2012 08:28:25 GMT
 recorded_with: VCR 2.2.4

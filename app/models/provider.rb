@@ -36,6 +36,6 @@ class Provider
   end
   
   def user_credentials
-    {oauth_token: token}
+    {oauth_token: self.token}
   end 
 end

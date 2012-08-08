@@ -6,12 +6,12 @@ google:
   server_port: 3030
   user_email: test@zambonidev.com
   user_password: hefu-lino-ke-cyt
-  access_token: ya29.AHES6ZTU0ufgUPK0kfpIm-7ea8VX1cAFz93PxdcDWimMfL0
+  access_token: ya29.AHES6ZQJ0wRbsP8yqdhzaJed7cdBZfKpgoDAx5X4GQETOOAFTwc7AQ
   token_type: Bearer
   expires_in: 3600
-  id_token: eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJhY2NvdW50cy5nb29nbGUuY29tIiwiYXVkIjoiMjY4Mjc3ODAwNDcuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJjaWQiOiIyNjgyNzc4MDA0Ny5hcHBzLmdvb2dsZXVzZXJjb250ZW50LmNvbSIsImlkIjoiMTE0Mjc1MTA1NDYwMDEwNjI0MjY0IiwiZW1haWwiOiJ0ZXN0QHphbWJvbmlkZXYuY29tIiwidmVyaWZpZWRfZW1haWwiOiJ0cnVlIiwidG9rZW5faGFzaCI6InhQSm5EOU5DTWJsbDV3N1ZTUmdOUGciLCJoZCI6InphbWJvbmlkZXYuY29tIiwiaWF0IjoxMzQ0MTQzNDI1LCJleHAiOjEzNDQxNDczMjV9.um7HSk-FCzDzHih07etWeW5zAxf1D8EGjoW9Qsl4XUKltKf0fzXY111HoAgx4T09HaDwuQVT5Gv3WngdjJBjFerom4iPHvDNoTopqEfDYgyKiLh5z8ejSeBbG6YgKNBIFpq1DRNkRmiAWwjdqWry1g0Rv411HvkHLIp5qt31oBI
-  refresh_token: 1/-atFkqQFQmsgcgpAQzZjI2VL13uHMgFmV-Zf3-MkjOc
-  expires_at: 2012-08-04 23:15:24.479042000 -07:00
+  id_token: eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJhY2NvdW50cy5nb29nbGUuY29tIiwiYXVkIjoiMjY4Mjc3ODAwNDcuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJjaWQiOiIyNjgyNzc4MDA0Ny5hcHBzLmdvb2dsZXVzZXJjb250ZW50LmNvbSIsImlkIjoiMTE0Mjc1MTA1NDYwMDEwNjI0MjY0IiwiZW1haWwiOiJ0ZXN0QHphbWJvbmlkZXYuY29tIiwidmVyaWZpZWRfZW1haWwiOiJ0cnVlIiwidG9rZW5faGFzaCI6InJHSTVHNnQ4ck1OOE1HZy16akxUclEiLCJoZCI6InphbWJvbmlkZXYuY29tIiwiaWF0IjoxMzQ0NDEyODY2LCJleHAiOjEzNDQ0MTY3NjZ9.fgaX8Rf_PoIz_ElmgYr_HsPwFPylfWDV2lb7yQprMw6FXUMvEKK_8hQJW6KRGO4wDXCWpEt9HAGPOGnzlqX09Dx7eK5eYJ4EPHPolmaISx6ekLGPirACroiRrfiXgpfTU0_5vl6pXXMccYLCrv_6r1t7y1nZQi58APmX3GxWKA4
+  refresh_token: 1/ZyX60JwZITmRPpzk15-NN-asWN2ecRv-HaTW2VOrR-o
+  expires_at: 2012-08-08 02:06:07.008021000 -07:00
 facebook:
   client_id: 392520774140968
   client_secret: ffe43e9eaa183347a9c25672fa34d646
@@ -21,9 +21,9 @@ facebook:
   user_email: fletch@zambonidev.com
   user_password: woly-qui-phyg-vo
   server_port: 3030
-  access_token: SMLUY34ML3BQOWQGK5JA3Z225ZMV4EMZRQHJO3HHTHWIBMO5
-  expires: '5106035'
-  expires_at: 2012-08-05 03:21:14.698432000 -07:00
+  access_token: AAAFkZCt1PRCgBAL7ZB6EuEHGBScnBULkNMmrWtWWVqx3v5P2UT0KzPUU1iz0K7dc7rJZC8QIt3BRdQBP0hLEgUzGLhJQwKSGQIrp7oOQgZDZD
+  expires: '5180938'
+  expires_at: 2012-10-06 23:58:37.941453000 -07:00
 foursquare:
   server_port: 3030
   client_id: YUORTWIN2CBQWOQWLRZLKU0CLL5KHJC2OO0TDXJZCRELNXIL
@@ -31,3 +31,4 @@ foursquare:
   redirect_uri: http://localhost:3030/callbacks/foursquare.json
   user_email: test@zambonidev.com
   user_password: t3sting
+  access_token: SMLUY34ML3BQOWQGK5JA3Z225ZMV4EMZRQHJO3HHTHWIBMO5

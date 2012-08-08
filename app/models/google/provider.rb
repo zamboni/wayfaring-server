@@ -23,9 +23,10 @@ class Google::Provider < Provider
 
     {
       token: token_response['access_token'],
-      expiration: (Time.now + token_response['expires_in'].seconds)
     }.merge(
       (token_response['refresh_token'].nil? ? {} : {refresh_token: token_response['refresh_token']})
+    ).merge(
+      (token_response['expires_in'].nil?    ? {} : {expiration: (Time.now + token_response['expires_in'].seconds)})
     )
   end
 

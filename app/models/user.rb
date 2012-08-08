@@ -28,7 +28,6 @@ class User
   end
 
   def self.find_or_create_from_provider provider_class, uid
-    
     user = User.where('providers.uid' => uid, 'provider._type' => provider_class.to_s).first
     unless user
       user = User.create!(providers: [ provider_class.new(uid: uid) ])

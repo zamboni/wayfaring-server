@@ -19,14 +19,4 @@ describe Google::Provider do
       @token.parsed_response['expires_in'].should == 3600
     end
   end
-  context 'provider_hash' do
-    before do
-      @token_response = {provider_type: 'provider_type', access_token: 'access_token', expires_in: 3600}
-    end
-
-    it 'does not include refresh token' do
-      token_hash = Google::Provider.provider_hash @token_response
-      token_hash.should_not include(refresh_token)
-    end
-  end
 end
