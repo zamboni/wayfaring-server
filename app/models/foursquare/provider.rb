@@ -1,6 +1,7 @@
 class Foursquare::Provider < Provider
   base_uri 'https://api.foursquare.com/v2/'
-  
+
+
   def self.client_credentials
     client_credentials = super
     {client_id: client_credentials['consumer_key'], client_secret: client_credentials['consumer_secret'], v: client_credentials['api_date']}

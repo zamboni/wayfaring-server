@@ -27,10 +27,11 @@ class User
     provider 
   end
 
-  def self.find_or_create_from_provider provider_class, uid
+  def self.find_or_create_from_provider provider_class, provider_token 
+    uid             = provider_class.get_uid provider_token
     user = User.where('providers.uid' => uid, 'provider._type' => provider_class.to_s).first
     unless user
-      user = User.create!(providers: [ provider_class.new(uid: uid) ])
+      user = User.create(providers: [ provider_class.new(uid: uid, token: provider_token) ])
     end
     user 
   end

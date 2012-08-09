@@ -9,7 +9,7 @@ describe User do
       end
     
       it 'that exists' do
-        @user = User.find_or_create_from_provider 'foursquare', mocked_token_for('foursquare')
+        @user = User.find_or_create_from_provider Foursquare::Provider, mocked_token_for('foursquare')
     
         @user.should == @user
       end
@@ -20,7 +20,7 @@ describe User do
       end
     
       it 'that exists' do
-        @user = User.find_or_create_from_provider 'facebook', mocked_token_for('facebook')
+        @user = User.find_or_create_from_provider Facebook::Provider, mocked_token_for('facebook')
     
         @user.should == @user
       end
@@ -40,7 +40,7 @@ describe User do
       end
 
       it 'with uid' do
-        @user.providers.first.uid.should == mocked_uid_for('foursquare')
+        @user.providers.first.uid.should == '34058252'
       end
 
       it 'with token' do
@@ -59,7 +59,7 @@ describe User do
       end
 
       it 'with uid' do
-        @user.providers.first.uid.should == mocked_uid_for('facebook')
+        @user.providers.first.uid.should == '100004135983105'
       end
 
       it 'with token' do

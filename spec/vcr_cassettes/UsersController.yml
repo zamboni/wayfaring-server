@@ -99,4 +99,105 @@ http_interactions:
       string: ! '{"id":"100002952898027","name":"RebelHold TestAccount","first_name":"RebelHold","last_name":"TestAccount","link":"http:\/\/www.facebook.com\/rebelhold.testaccount","username":"rebelhold.testaccount","gender":"male","email":"test\u0040rebelhold.com","timezone":-7,"locale":"en_US","verified":true,"updated_time":"2012-06-16T17:46:24+0000"}'
     http_version: '1.1'
   recorded_at: Wed, 18 Jul 2012 03:32:43 GMT
-recorded_with: VCR 2.2.3
+- request:
+    method: get
+    uri: https://api.foursquare.com/v2/users/self?oauth_token=SMLUY34ML3BQOWQGK5JA3Z225ZMV4EMZRQHJO3HHTHWIBMO5
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      access-control-allow-origin:
+      - ! '*'
+      cache-control:
+      - no-cache, private, no-store
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Thu, 09 Aug 2012 08:27:23 GMT
+      expires:
+      - Thu, 9 Aug 2012 08:27:23 GMT
+      pragma:
+      - no-cache
+      server:
+      - nginx/1.2.1
+      strict-transport-security:
+      - max-age=864000
+      x-ratelimit-limit:
+      - '500'
+      x-ratelimit-remaining:
+      - '498'
+      content-length:
+      - '4134'
+      connection:
+      - Close
+    body:
+      encoding: US-ASCII
+      string: ! '{"meta":{"code":200,"errorType":"deprecated","errorDetail":"Please
+        provide an API version to avoid future errors.See http:\/\/bit.ly\/vywCav"},"notifications":[{"type":"notificationTray","item":{"unreadCount":0}}],"response":{"user":{"id":"34058252","firstName":"Test","lastName":"User","relationship":"self","photo":"https:\/\/foursquare.com\/img\/blank_boy.png","friends":{"count":0,"groups":[{"type":"friends","name":"Mutual
+        friends","count":0,"items":[]},{"type":"others","name":"Other friends","count":0,"items":[]}]},"type":"user","tips":{"count":0},"lists":{"groups":[{"type":"created","count":1,"items":[]}]},"gender":"male","homeCity":"Tempe","bio":"","contact":{"email":"test@zambonidev.com"},"pings":false,"badges":{"count":2,"items":[{"id":"50222314e4b05f49ada3cf9a","badgeId":"4c4f08667a0803bbaa202ab7","name":"Newbie","unlockMessage":"You
+        unlocked the Newbie badge!","description":"Your first check-in! You earn badges
+        for your adventures, like staying out late or trying 5 different pizza joints.
+        And with every check-in, we learn more about your tastes and can recommend
+        new places. Head over to the Explore tab to see our suggestions!","badgeText":"Your
+        first check-in! You earn badges for your adventures, like staying out late
+        or trying 5 different pizza joints. And with every check-in, we learn more
+        about your tastes and can recommend new places. Head over to the Explore tab
+        to see our suggestions!","image":{"prefix":"https:\/\/playfoursquare.s3.amazonaws.com\/badge\/","sizes":[57,114,200,300,400],"name":"\/newbie.png"},"unlocks":[{"checkins":[{"id":"5022230fe4b05f49ada3ce48","createdAt":1344414479,"type":"checkin","timeZone":"America\/New_York","timeZoneOffset":-240,"venue":{"id":"3fd66200f964a52060e71ee3","name":"Bar
+        29","contact":{"phone":"2127790306","formattedPhone":"(212) 779-0306"},"location":{"address":"405
+        Third Avenue","crossStreet":"btw 28th and 29th St","lat":40.742407,"lng":-73.980599,"postalCode":"10016","city":"New
+        York","state":"NY","country":"United States","cc":"US"},"categories":[{"id":"4bf58dd8d48988d116941735","name":"Bar","pluralName":"Bars","shortName":"Bar","icon":"https:\/\/foursquare.com\/img\/categories\/nightlife\/bar.png","parents":["Nightlife
+        Spots"],"primary":true}],"verified":true,"stats":{"checkinsCount":2393,"usersCount":1526,"tipCount":24},"likes":{"count":0,"groups":[]},"beenHere":{"count":0}},"likes":{"count":0,"groups":[]},"photos":{"count":0,"items":[]},"comments":{"count":0,"items":[]}}]}]}]},"mayorships":{"count":0,"items":[]},"checkins":{"count":1,"items":[{"id":"5022230fe4b05f49ada3ce48","createdAt":1344414479,"type":"checkin","timeZone":"America\/New_York","timeZoneOffset":-240,"venue":{"id":"3fd66200f964a52060e71ee3","name":"Bar
+        29","contact":{"phone":"2127790306","formattedPhone":"(212) 779-0306"},"location":{"address":"405
+        Third Avenue","crossStreet":"btw 28th and 29th St","lat":40.742407,"lng":-73.980599,"postalCode":"10016","city":"New
+        York","state":"NY","country":"United States","cc":"US"},"categories":[{"id":"4bf58dd8d48988d116941735","name":"Bar","pluralName":"Bars","shortName":"Bar","icon":"https:\/\/foursquare.com\/img\/categories\/nightlife\/bar.png","parents":["Nightlife
+        Spots"],"primary":true}],"verified":true,"stats":{"checkinsCount":2393,"usersCount":1526,"tipCount":24},"likes":{"count":0,"groups":[]},"like":false,"friendVisits":{"count":0,"summary":"You''ve
+        been here","items":[{"visitedCount":1,"liked":false,"user":{"id":"34058252","firstName":"Test","lastName":"User","relationship":"self","photo":"https:\/\/foursquare.com\/img\/blank_boy.png","tips":{"count":0},"lists":{"groups":[{"type":"created","count":1,"items":[]}]},"gender":"male","homeCity":"Tempe","bio":"","contact":{"email":"test@zambonidev.com"}}}]},"beenHere":{"count":1,"marked":true},"listed":{"groups":[{"type":"dones","count":1,"items":[]}]}},"likes":{"count":0,"groups":[]},"like":false,"photos":{"count":0,"items":[]},"comments":{"count":0,"items":[]}}]},"following":{"count":0},"requests":{"count":0},"todos":{"count":0},"photos":{"count":0,"items":[]},"scores":{"recent":5,"max":5,"goal":50,"checkinsCount":1},"referralId":"u-34058252"}}}'
+    http_version: '1.1'
+  recorded_at: Thu, 09 Aug 2012 08:27:23 GMT
+- request:
+    method: get
+    uri: https://graph.facebook.com/me?access_token=AAAFkZCt1PRCgBAL7ZB6EuEHGBScnBULkNMmrWtWWVqx3v5P2UT0KzPUU1iz0K7dc7rJZC8QIt3BRdQBP0hLEgUzGLhJQwKSGQIrp7oOQgZDZD
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      access-control-allow-origin:
+      - ! '*'
+      cache-control:
+      - private, no-cache, no-store, must-revalidate
+      content-type:
+      - text/javascript; charset=UTF-8
+      etag:
+      - ! '"e65873358bc52f835c1d51d0e540694ac1b04cc2"'
+      expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      last-modified:
+      - '2012-07-30T08:54:32+0000'
+      pragma:
+      - no-cache
+      x-fb-rev:
+      - '606826'
+      x-fb-debug:
+      - qqtSGm9p7clkD8qrhgl5XHar8KtniEQMbpYQ2e4mZ0s=
+      date:
+      - Thu, 09 Aug 2012 08:27:24 GMT
+      connection:
+      - close
+      content-length:
+      - '264'
+    body:
+      encoding: US-ASCII
+      string: ! '{"id":"100004135983105","name":"Zamboni Dev","first_name":"Zamboni","last_name":"Dev","link":"http:\/\/www.facebook.com\/zamboni.dev","username":"zamboni.dev","gender":"male","timezone":-7,"locale":"en_US","verified":true,"updated_time":"2012-07-30T08:54:32+0000"}'
+    http_version: '1.1'
+  recorded_at: Thu, 09 Aug 2012 08:27:24 GMT
+recorded_with: VCR 2.2.4
